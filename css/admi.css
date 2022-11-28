@@ -4,8 +4,16 @@
     margin: 0;
     padding: 0;
 }
+/* @media(min-width:768px){
+    .contenner{
+        margin-left: 350px;
 
+    }
+} */
 
+.contenner {
+    position: absolute;
+}
 .menu-mobile {
     position: fixed;
     background-color: #fff;
@@ -24,10 +32,8 @@
     transition: ease-in-out 0.5s;
 }
 
+
 .icon img {
-
-
-
     margin-left: 20px;
     margin-top: 20px;
 }
@@ -45,37 +51,6 @@
 
 }
 
-/* 
-.menu-mobile {
-    width: 0px;
-    height: 0px;
-    overflow: hidden;
-} */
-
-/* }
-    .kmau{
-        position: absolute;
-        top: 0;
-        left: 250px;
-        width: calc(100%-250px);
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        padding: 20px;
-        transition: ease-in-out0.5s;
-    } */
-
-.contenner {
-    width: 1440px;
-    margin: 0 auto;
-    cursor: pointer;
-    position: absolute;
-}
-
-/* .contenner {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-} */
 
 .mau {
     background-color: aqua;
@@ -107,9 +82,14 @@
 }
 
 .xinchao p {
-    margin-left: 900px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-left: 1200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    
+}
+.qqq{
+    border-bottom: 1px solid #000;
 }
 
 .headding {
@@ -153,23 +133,31 @@
     border-width: 1px;
     border-style: solid;
     padding: 10px 10px;
-    text-align: center;
+    margin-left: 50px;
+    margin-top: 20px;
+
 }
-
-.cot button {
-
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 10px 10px;
+#cs{
+    
+    margin-top: 100px;
+}
+.cot a{
+    text-align: center;
+    margin:20px 20px ;
+   
+}
+.cot a{
+    margin-top: 100px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-align: center;
+} 
+.cot a{
+    
     background-color: aqua;
     text-align: center;
     border-radius: 20px;
     color: #fff;
-
-}
-
-.cot :hover {
-    color: rgb(238, 44, 44);
 }
 
 #classStu {
@@ -210,6 +198,18 @@
     height: 1000px;
     background-color: rgb(120, 117, 117);
 }
+table{
+    
+    margin-top: 50px;
+}
+table td{
+    width: 1440px;
+    text-align: center;
+}
+.bang{
+    padding: 20px 20px;
+}
+
 
 /* check */
 
@@ -234,21 +234,6 @@
     margin: 0 auto;
     width: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* học sinh */
 
@@ -295,13 +280,18 @@
     border-radius: 20px;
     color: #fff;
 }
-
+.dulieu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border: 1px solid #000 ;
+}
+.cotdulieu
 
 
 /* coso */
 .ca1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex !important;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
     text-align: center;
     margin-top: 80px;
 }
@@ -312,6 +302,7 @@ input {
     color: #000;
     padding: 10px 10px;
 }
+
 
 .aaa h3 {
     padding: 10px 10px;
@@ -343,4 +334,26 @@ h4 {
     border: 1px solid;
 }
 
-/* giáo viên */
+/* coso2 */
+#on{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 100px;
+}
+#on input{
+    margin-left: 50px;
+}
+.cottt li{
+    display: block;
+    padding: 25px;
+  
+}
+.cottt li a{
+    text-decoration: none;
+    border: 1px solid ;
+    padding: 10px 10px;
+    border-radius: 20px;
+    background-color: aqua;
+    color: #fff;
+
+}

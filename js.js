@@ -1,17 +1,16 @@
-let show = document.querySelector("#show");
+let show = document.querySelector(".show");
 let all = document.querySelector(".all");
 function showmmain() {
     let Main = document.querySelector(".all");
     if (Main.style.display == "none") {
         Main.style.display = "block";
-        
+
     }
     else {
         Main.style.display = "none";
     }
 }
-show.addEventListener("click", showmmain);
-all.addEventListener("dblclick", showmmain);
+show.addEventListener("click" , showmmain);
 
 let icon = document.querySelector(".icon");
 function showMenu() {
@@ -56,10 +55,8 @@ function showMenu() {
             </div>
         </div>
         `;
-        menu.style.width = "300px";
-        menu.style.height = "300px";
-        menu.style.overflow = "none";
+
     }
 }
-icon.addEventListener("click", showMenu); 
+showMenu();
 

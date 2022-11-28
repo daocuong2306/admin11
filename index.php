@@ -25,9 +25,10 @@ switch ($check) {
     case "giaovien":
            if(isset($_SESSION["user"])) {
                extract($_SESSION["user"]);
-               if(isset($iddiaovien)) {
+               if(isset($idgiaovien)) {
                    header('Location: admin/index.php');
                } else {
+                session_unset();
                    echo "ban k phai giao vien";
                }
            } else {

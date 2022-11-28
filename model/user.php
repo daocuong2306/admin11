@@ -24,6 +24,7 @@ function dangnhap($checkuser,$check) {
             header('Location: index.php?act=hocsinh');
         }
     } else {
+        session_unset();
         $thongbao = "tài khoản không tồn tại vui lòng kiểm tra hoặc đăng kí";
         echo $thongbao;
     }

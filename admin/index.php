@@ -4,6 +4,7 @@ include "../model/pdo.php";
 include "../model/sinhvien.php";
 include "../model/giaovien.php";
 include "../model/lophoc.php";
+
 session_start();
 if(isset($_GET['act'])){
     $act = $_GET['act'];
@@ -151,25 +152,28 @@ if(isset($_GET['act'])){
                             include "giao_vien/list.php";
                             break;
                 // dang nhap
-<<<<<<< HEAD
+
                 case 'lophoc' :
                     $listlh=loadall_lh();
-                    include "lop_hoc/list.php";
+                    include "lop_hoc/loadall.php";
                     
                 
-                    if(isset($_GET['idlophoc']) && ($_GET['idlophoc']>0)) {
-// echo "<pre>";
-// echo print_r($_GET);
-                        $idlophoc = $_GET['idlophoc'];
-                        $dsgv = loadgv_by_idlophoc($idlophoc);
-                        $dssv = loadsv_by_idlophoc($idlophoc);
-                        $lophoc=loadone($idlophoc);
-                        include "lop_hoc/loadall.php";
-                        
-                    }
                     
 
                     break;
+                    case 'loadoneclass' :
+                        
+                    if(isset($_GET['idlophoc']) && ($_GET['idlophoc']>0)) {
+                        // echo "<pre>";
+                        // echo print_r($_GET);
+                                                $idlophoc = $_GET['idlophoc'];
+                                                $dsgv = loadgv_by_idlophoc($idlophoc);
+                                                $dssv = loadsv_by_idlophoc($idlophoc);
+                                                $lophoc=loadone($idlophoc);
+                                                include "lop_hoc/lophoc.php";
+                                                
+                                            }
+                        break;
 
                     case 'listlh' :
                         $listlh=loadall_lh();
@@ -191,7 +195,7 @@ if(isset($_GET['act'])){
                         break;
                        
 
-=======
+
             case  "dangnhap" :
                 if(isset($_POST['dangnhap']) && ($_POST['dangnhap']) ) {
                     $user = $_POST["user"];
@@ -207,7 +211,9 @@ if(isset($_GET['act'])){
                 }
                 include "dangnhap.html";
                 break;
->>>>>>> 746d7f239023e41353155bc7e52f777fdf1d5884
+            case "diemdanh" : 
+               
+                break;
                 case "thoat" :
                     //            echo session_destroy();
                                 session_unset();
