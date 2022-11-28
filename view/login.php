@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/dangnhap.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href=""><img src="./img/image 10.png" alt=""></a>
+            </div>
+            <div class="text">
+                <p>Welcome school</p>
+                <h2>Login to your account</h2>
+            </div>
+        </header>
+        <main>
+            <form action="index.php?act=dangnhap" method="post">
+                <div class="inputt">
+                    <div class="email">
+                        <p>Email</p>
+                        <input type="text" id="email"  placeholder="John.snow@gmail.com" name="user">
+                    </div>
+                    <div class="pass">
+                        <p>Password</p>
+                        <input type="text" id="pass" placeholder="*********" name="pass">
+                    </div>
+                </div>
+
+                <div class="buttonn">
+                    <div class="button1">
+                        <input type="submit" value="Đăng Nhập" name="dangnhap">
+                    </div>
+                    <div class="button2">
+                        <button>
+                            <img src="./src/img/signin/iconfinder_Google_1298745 1.png" alt="">Or sign-in with google
+</button>
+                    </div>
+                </div>
+
+
+            </form>
+        </main>
+        <footer>
+           <div class="qmk">
+            <a href=""><p>Forgot password?</p></a>
+           </div>
+           <div class="kmk">
+               <div class="a">
+                  <p>Dont have an account?</p>
+              </div>
+              <div class="b">
+                <a href=""><p> Join free today</p></a>
+              </div>
+
+           </div>
+
+        </footer>
+    </div>
+<script src="./js.js"></script>
+</body>
+</html>
