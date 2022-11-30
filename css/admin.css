@@ -12,7 +12,7 @@
     }
 } */
 .contenner {
-    position: absolute;
+    /* position: absolute; */
     height: auto;
 }
 
@@ -213,10 +213,10 @@
 }
 
 .all {
-
+    /* display: none; */
     width: 100%;
     height: auto;
-
+    /* background-color: rgb(132, 129, 129); */
     color: #000;
 }
 

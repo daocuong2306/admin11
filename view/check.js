@@ -1,22 +1,9 @@
-let show = document.querySelectorAll(".show");
-// console.log(show)
+
 let all = document.querySelector(".all");
-if(all.style.height < "500px") {
+if (all.style.height < "500px") {
     all.style.height = "1000px";
 } else {
     all.style.height = "auto";
-}
-function showmmain() {
-    let Main = document.querySelector(".all");
-    if (Main.style.display == "none") {
-        Main.style.display = "block";
-    }
-    else {
-        Main.style.display = "none";
-    }
-}
-for(let item of show) {
-    item.addEventListener("click", showmmain);
 }
 let icon = document.querySelector(".icon");
 function showMenu() {

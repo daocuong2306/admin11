@@ -16,7 +16,7 @@
                 <td>Runing</td>
                 <td>Đào Mạnh Cường</td>
                 <td>10</td>
-                <td><button class="show">Xem</button></td>
+                <td><button class="show"><a href="../view/showLop.php";"></a>Xem</button></td>
             </tr>
             <tr>
                 <td>JSA-14</td>

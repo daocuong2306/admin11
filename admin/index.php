@@ -1,5 +1,6 @@
 <?php
 include "../view/header.php";
+
 include "../model/pdo.php";
 include "../model/sinhvien.php";
 include "../model/giaovien.php";
@@ -57,8 +58,10 @@ if(isset($_GET['act'])){
                include "sinh_vien/list.php";
                 break;
             case 'listsv' :
-                $sinhvien = loadall_sv();
-                include "sinh_vien/list.php";
+//                $sinhvien = loadall_sv();
+                    include "../view/showLop.php";
+
+                    break;
             case 'suasv':
                 if(isset($_GET['id']) && ($_GET['id']>0)){
                     $suasv = loadone_sv($_GET['id']);
@@ -223,6 +226,7 @@ if(isset($_GET['act'])){
                 case 'listgv' :
                     $giaovien = loadall_gv();
                     include "giao_vien/list.php";
+                    break;
          default:
          include "giaodien.php";
          break;
@@ -232,6 +236,7 @@ if(isset($_GET['act'])){
   else{
       include "giaodien.php";
   }
-include "../view/showLop.php";
+include "../view/all.php";
+include "../view/footer.php";
 
 //   include "footer.php";
