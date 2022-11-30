@@ -96,7 +96,9 @@ if(isset($_GET['act'])){
                     }
                     $gioitinh = $_POST['gioitinh'];
                     $idlophoc = $_POST['idlophoc'];
-                    insert_gv($name,$adess,$age,$gmail,$tell,$img,$gioitinh,$idlophoc);
+                    $userGV=$_POST['userGV'];
+                    $pass=$_POST['pass'];
+                    insert_gv($name,$adess,$age,$gmail,$tell,$img,$gioitinh,$idlophoc,$userGV,$pass);
                     $thongbao = "thêm thành công";
                 }
                 $listlophoc=loadall_lh();
