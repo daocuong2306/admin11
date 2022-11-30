@@ -8,7 +8,6 @@ foreach ($dsgv as $value){
 }
 
 ?>
-<form action="" id="class">
             <table border="1">
                 <tr>
                     <td>Tên Học sinh</td>
@@ -16,36 +15,31 @@ foreach ($dsgv as $value){
                     <td>Ảnh</td>
                     <td>Trạng Thái</td>
                 </tr>
-                <form action="index.php?act=diemdanh&idlophoc=<?php echo $_SESSION['lophoc']; ?>" method="post">
+                <form action="index.php?act=diemdanh&idlophoc=<?php echo $_SESSION['lophoc']; ?>" method="post" enctype="multipart/form-data">
 
                 <?php
-
                 foreach ($dssv as $value){
                     extract($value);
                     $anh="../uploadimg/".$img;
                     echo '
                         <tr>
-                        <td>'.$name.'</td>
-                        <td>'.$tell.'</td>
-                        <td> <img src="'.$anh.'" alt=""></td>
-                        <td><input type="checkbox" name="checkdd"></td>
+                            <td>'.$name.'</td>
+                            <td>'.$tell.'</td>
+                            <td> <img src="'.$anh.'" alt=""></td>
+                            <td><input type="checkbox" name="checkdd" value="'.$idsinhvien.'"></td>
                         </tr>
                     
                     ';
-                    ?>
-                    </table>
+//                if($_POST[''])
+                 } ?>
+            </table>
+                <button class="seen"  name="gui" type="submit">Gửi</button>
+    <?php
 
-    <button class="seen" type="submit">Gửi</button>
-
-
+    ?>
                 </form>
-                      <?php  $x=$_POST['checkdd']=="on" ?  $idsinhvien : "";
-
-                }
-                  echo $x;
-                ?>
 
 
 
 
-        </form>
+

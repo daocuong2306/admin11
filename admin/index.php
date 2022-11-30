@@ -214,9 +214,15 @@ if(isset($_GET['act'])){
                 include "dangnhap.html";
                 break;
             case "diemdanh" :
-                    $idlophoc = $_GET['idlophoc'];
-                    $dssv= loadsv_by_idlophoc($idlophoc);
-                    $dsgv =  loadgv_by_idlophoc($idlophoc);
+                $idlophoc = $_GET['idlophoc'];
+                $dssv= loadsv_by_idlophoc($idlophoc);
+                $dsgv =  loadgv_by_idlophoc($idlophoc);
+                if(isset($_POST['gui']) && ($_POST['gui'])) {
+
+                    $dssvdd= $_POST['checkdd'];
+                    insert_dd($dssvdd);
+                    echo "thanh cong";
+                }
 
                     include "../view/showdiemdanh.php";
                 break;
