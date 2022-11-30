@@ -158,10 +158,7 @@ if(isset($_GET['act'])){
 
                 case 'lophoc' :
                     $listlh=loadall_lh();
-                    include "lop_hoc/loadall.php";
-                    
-                
-                    
+                    include "giaodien.php";
 
                     break;
                     case 'loadoneclass' :
@@ -214,8 +211,12 @@ if(isset($_GET['act'])){
                 }
                 include "dangnhap.html";
                 break;
-            case "diemdanh" : 
-               
+            case "diemdanh" :
+                    $idlophoc = $_GET['idlophoc'];
+                    $dssv= loadsv_by_idlophoc($idlophoc);
+                    $dsgv =  loadgv_by_idlophoc($idlophoc);
+
+                    include "../view/showdiemdanh.php";
                 break;
                 case "thoat" :
                     //            echo session_destroy();

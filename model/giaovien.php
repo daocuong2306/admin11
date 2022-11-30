@@ -3,7 +3,7 @@ function insert_gv($name,$adess,$age,$gmail,$tell,$img,$gioitinh,$tenlophoc){
     $spl = "insert into giaovien values (null,'$name','$adess','$age','$gmail','$tell','$img','$gioitinh','$tenlophoc')";
     pdo_execute($spl);
 }
-function loadall_gv(){
+    function loadall_gv(){
     $result = "select * from giaovien order by idgiaovien ";
     $giaovien=pdo_query($result);
  return $giaovien;

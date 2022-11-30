@@ -28,8 +28,8 @@ function showMenu() {
                     <a href="./admintrangchu.html" id="abc">Trang chủ</a>
                 </div>
                 <div class="img_text">
-                    <a href="./indexcoso.html"> <img src="./img/image 3.png" alt=""></a>
-                    <a href="./indexcoso.html" id="abc">Cơ Sở</a>
+                    <a href="../admin/index.php?act=lophoc"> <img src="./img/image 3.png" alt=""></a>
+                    <a href="../admin/index.php?act=lophoc" id="abc">Lớp Học</a>
                 </div>
                 <div class="img_text">
                     <a href="./indexhocsinh.html"> <img src="./img/image 2.png" alt=""></a>

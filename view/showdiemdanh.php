@@ -1,5 +1,14 @@
+<?php
+$_SESSION['lophoc'] = $_GET["idlophoc"];
+echo $_SESSION['lophoc'];
+foreach ($dsgv as $value){
+    extract($value);
+    // echo $img_path.$anh_sanpham;
+    echo $name."<br>";
+}
 
-        <form action="" id="class">
+?>
+<form action="" id="class">
             <table border="1">
                 <tr>
                     <td>Tên Học sinh</td>
@@ -7,51 +16,36 @@
                     <td>Ảnh</td>
                     <td>Trạng Thái</td>
                 </tr>
+                <form action="index.php?act=diemdanh&idlophoc=<?php echo $_SESSION['lophoc']; ?>" method="post">
 
-                <tr>
-                    <td>Hoàng Công Tiên</td>
-                    <td>0964495899</td>
-                    <td><img src="img/image 1.png" alt=""></td>
-                    <td>Đào Mạnh Cường</td>
-                    <td><input type="checkbox"></td>
-                </tr>
+                <?php
 
-                <tr>
-                    <td>Hoàng Công Tiên</td>
-                    <td>0964495899</td>
-                    <td><img src="img/image 1.png" alt=""></td>
-                    <td>Đào Mạnh Cường</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <td>Hoàng Công Tiên</td>
-                    <td>0964495899</td>
-                    <td><img src="img/image 1.png" alt=""></td>
-                    <td>Đào Mạnh Cường</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <td>Hoàng Công Tiên</td>
-                    <td>0964495899</td>
-                    <td><img src="img/image 1.png" alt=""></td>
-                    <td>Đào Mạnh Cường</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <td>Hoàng Công Tiên</td>
-                    <td>0964495899</td>
-                    <td><img src="img/image 1.png" alt=""></td>
-                    <td>Đào Mạnh Cường</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <td>Hoàng Công Tiên</td>
-                    <td>0964495899</td>
-                    <td><img src="img/image 1.png" alt=""></td>
-                    <td>Đào Mạnh Cường</td>
-                    <td><input type="checkbox"></td>
-                </tr>
+                foreach ($dssv as $value){
+                    extract($value);
+                    $anh="../uploadimg/".$img;
+                    echo '
+                        <tr>
+                        <td>'.$name.'</td>
+                        <td>'.$tell.'</td>
+                        <td> <img src="'.$anh.'" alt=""></td>
+                        <td><input type="checkbox" name="checkdd"></td>
+                        </tr>
+                    
+                    ';
+                    ?>
+                    </table>
 
-            </table>
-            <button class="seen">Gửi</button>
+    <button class="seen" type="submit">Gửi</button>
+
+
+                </form>
+                      <?php  $x=$_POST['checkdd']=="on" ?  $idsinhvien : "";
+
+                }
+                  echo $x;
+                ?>
+
+
+
+
         </form>
