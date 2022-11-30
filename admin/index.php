@@ -1,5 +1,5 @@
-<?php 
-include "giaodien.php";
+<?php
+include "../view/header.php";
 include "../model/pdo.php";
 include "../model/sinhvien.php";
 include "../model/giaovien.php";
@@ -232,5 +232,6 @@ if(isset($_GET['act'])){
   else{
       include "giaodien.php";
   }
+include "../view/showLop.php";
 
 //   include "footer.php";

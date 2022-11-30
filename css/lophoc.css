@@ -4,16 +4,18 @@
     margin: 0;
     padding: 0;
 }
+
 /* @media(min-width:768px){
     .contenner{
         margin-left: 350px;
 
     }
 } */
-
 .contenner {
     position: absolute;
+    height: auto;
 }
+
 .menu-mobile {
     position: fixed;
     background-color: #fff;
@@ -21,7 +23,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    max-width: 320px;
+    max-width: 250px;
     transform: translate(-100%);
     transition: 0.5s;
 }
@@ -53,31 +55,39 @@
 
 
 .mau {
-    background-color: aqua;
+    width: 250px;
+    background-color: #071b64;
     height: 1000px;
 
 }
 
-.mau img {
-    height: 160px 160px;
-}
+
+
 
 
 .img_text {
+    font-size: 15px;
     display: grid;
-    grid-template-columns: 86px 1fr;
-    margin-top: 40px;
+    grid-template-columns: 50px 1fr;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.menu img {
+    font-size: 100px;
+
 }
 
 .img_text img {
+    width: 30px;
     margin-left: 15px;
     margin-bottom: 20px;
 }
 
 #abc {
     text-decoration: none;
-    color: #000;
-    margin-top: 14px;
+    color: #fff;
+    margin-top: 2px;
 
 }
 
@@ -85,10 +95,11 @@
     margin-left: 1200px;
     margin-top: 10px;
     margin-bottom: 10px;
-    
-    
+
+
 }
-.qqq{
+
+.qqq {
     border-bottom: 1px solid #000;
 }
 
@@ -98,10 +109,6 @@
     align-items: center;
 }
 
-.kmau {
-
-    height: 1000px;
-}
 
 .hass {
     border-width: 1px;
@@ -137,24 +144,28 @@
     margin-top: 20px;
 
 }
-#cs{
-    
+
+#cs {
+
     margin-top: 100px;
 }
-.cot a{
+
+.cot a {
     text-align: center;
-    margin:20px 20px ;
-   
+    margin: 20px 20px;
+
 }
-.cot a{
+
+.cot a {
     margin-top: 100px;
     text-decoration: none;
     color: rgb(255, 255, 255);
     text-align: center;
-} 
-.cot a{
-    
-    background-color: aqua;
+}
+
+.cot a {
+
+    background-color: #071b64;
     text-align: center;
     border-radius: 20px;
     color: #fff;
@@ -165,51 +176,79 @@
     width: 100%;
     height: auto;
     margin: 0 auto;
-    margin-top: 20px;
+    padding: 50px;
+
 }
 
 #classStu table {
     margin: 0 auto;
     width: 100%;
     height: auto;
+    border: none;
 }
 
 #classStu table button {
     border: none;
     background-color: #fff;
+    width: 60px;
+    height: 30px;
 }
 
 #classStu table button:hover {
-    background-color: aqua;
+    background-color: #071b64;
+    color: #fff;
+
 }
 
 .showMain {
     width: 95%;
-    height: auto;
-    background-color: antiquewhite;
+    height: 90%;
+    background-color: #fff;
     position: relative;
-    top: 100px;
+    top: 5px;
     left: 30px;
-    padding: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
 }
 
 .all {
+    display: none;
     width: 100%;
-    height: 1000px;
-    background-color: rgb(120, 117, 117);
-}
-table{
-    
-    margin-top: 50px;
-}
-table td{
-    width: 1440px;
-    text-align: center;
-}
-.bang{
-    padding: 20px 20px;
+    height: auto;
+    background-color: rgb(132, 129, 129);
+    color: #000;
 }
 
+table {
+
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+table tr {
+    /* border-top: 1px solid #000; */
+    border-bottom: 1px solid #000;
+
+}
+
+.STT {
+    background-color: #071b64;
+    color: #fff;
+    border: none;
+}
+
+table td {
+    width: 1440px;
+    text-align: center;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.bang {
+    border-radius: 5px;
+    padding: 20px 20px;
+}
 
 /* check */
 
@@ -218,16 +257,29 @@ table td{
 
 .menu-list ul {
     display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .menu-list ul li {
     list-style: none;
-    margin-left: 30px;
+    width: 100px;
+    height: 40px;
+    margin: 0 20px;
 }
 
 .menu-list ul li:hover {
-    background-color: aqua;
-    color: #fff;
+    border: 1px solid #071b64;
+    border-radius: 10px;
+    color: #000;
+    padding: 5px 0;
+
+}
+
+.menu-list ul li a {
+    text-decoration: none;
+    color: #000;
 }
 
 #class table {
@@ -273,58 +325,65 @@ table td{
     padding: 50px 60px;
 }
 
-.seasc button {
-    margin-left: 200px;
-    font-size: 20px;
-    background-color: aqua;
-    border-radius: 20px;
-    color: #fff;
-}
-.dulieu{
+.dulieu {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    border: 1px solid #000 ;
+    border: 1px solid #000;
 }
-.cotdulieu
 
-
-/* coso */
-.ca1 {
+.select {
     display: flex !important;
-    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 40px;
+}
+
+.seasc button {
+    width: 100px;
+    height: 30px;
     text-align: center;
-    margin-top: 80px;
+    font-size: 15px;
+    background-color: #071b64;
+    border-radius: 5px;
+    color: #fff;
 }
 
 input {
     text-align: center;
-    width: 190px;
+    width: 100px;
+    height: 30px;
     color: #000;
     padding: 10px 10px;
 }
+
+.status-item {
+    width: 100px;
+    height: 30px;
+    /* padding: 10px 10px; */
+
+}
+
+/* coso */
+.ca1 {
+    display: flex;
+    text-align: center;
+    margin-top: 80px;
+}
+
+
 
 
 .aaa h3 {
     padding: 10px 10px;
     font-size: 15px;
     border: 1px solid;
-    background-color: aqua;
+    background-color: #071b64;
     border-radius: 20px;
 
 }
 
-#hihi {
-    padding: 10px 10px;
 
-}
 
-.seasc button {
-    padding: 10px 10px;
-    font-size: 15px;
-    background-color: aqua;
-    border-radius: 20px;
-    color: #fff;
-}
 
 
 h4 {
@@ -335,25 +394,117 @@ h4 {
 }
 
 /* coso2 */
-#on{
+#on {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: 100px;
 }
-#on input{
+
+#on input {
     margin-left: 50px;
 }
-.cottt li{
+
+.cottt li {
     display: block;
     padding: 25px;
-  
+
 }
-.cottt li a{
+
+.cottt li a {
     text-decoration: none;
-    border: 1px solid ;
+    border: 1px solid;
     padding: 10px 10px;
     border-radius: 20px;
-    background-color: aqua;
+    background-color: #071b64;
     color: #fff;
 
+}
+
+#show {
+    color: rgb(33, 158, 87);
+}
+
+.bang {
+    border-radius: 50px;
+}
+
+table {
+
+    border: 1px solid #000;
+    border-collapse: collapse;
+
+}
+
+table tr {
+    border-radius: 20px;
+}
+
+thead tr th {
+    background-color: #071b64;
+    border: none;
+    color: #fff;
+}
+
+tr td {
+    padding: 20px 0px;
+}
+
+tr th {
+    padding: 20px 0px;
+}
+
+/* sửa phần all */
+.showMain p {
+    padding: 20px 10px;
+}
+
+.showMain .menu-list {
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.showMain .show {
+    border: none;
+    background-color: #071b64;
+    color: #fff;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.showMain .show:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.showMain .edit {
+    background-color: #fff;
+    border: none;
+    width: 80px;
+    height: 30px;
+}
+
+.showMain .edit:hover {
+    background-color: #071b64;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.showMain td img {
+    width: 100px;
+    height: 80px;
+}
+.showMain button.seen {
+    width: 80px;
+    height: 30px;
+    background-color: #071b64;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-left: 1250px;
+    margin-top: 20px;
 }
