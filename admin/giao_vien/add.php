@@ -50,6 +50,14 @@ border-radius: 5px;
             Giới tính <br>
            <input type="text" name="gioitinh" id="">
         </div>
+        <div class="rowinput">
+            Username <br>
+            <input type="text" name="userGV" id="">
+        </div>
+        <div class="rowinput">
+            Password <br>
+           <input type="text" name="pass" id="">
+        </div>
         <!-- <div class="rowinput">
             Mã lóp phụ trách <br>
            <input type="hidden" name="idlophoc" id="">

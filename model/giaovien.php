@@ -1,6 +1,6 @@
 <?php
-function insert_gv($name,$adess,$age,$gmail,$tell,$img,$gioitinh,$tenlophoc){
-    $spl = "insert into giaovien values (null,'$name','$adess','$age','$gmail','$tell','$img','$gioitinh','$tenlophoc')";
+function insert_gv($name,$adess,$age,$gmail,$tell,$img,$gioitinh,$tenlophoc,$userGV,$pass){
+    $spl = "insert into giaovien values (null,'$name','$adess','$age','$gmail','$tell','$img','$gioitinh','$tenlophoc','$userGV','$pass')";
     pdo_execute($spl);
 }
     function loadall_gv(){
@@ -10,9 +10,9 @@ function insert_gv($name,$adess,$age,$gmail,$tell,$img,$gioitinh,$tenlophoc){
 }
 function update_gv($idgiaovien,$name,$adess,$age,$gmail,$tell,$img,$gioitinh){
     if($img !=" "){
-        $sql ='update giaovien set idgiaovien = "'.$idgiaovien.'",  name = "'.$name.'",adess = "'.$adess.'",age = "'.$age.'",gmail = "'.$gmail.'",tell = "'.$tell.'",img = "'.$img.'",gioitinh = "'.$gioitinh.'" where idgiaovien = '.$idgiaovien;
+        $sql ='update giaovien set idgiaovien = "'.$idgiaovien.'",  name = "'.$name.'",adess = "'.$adess.'",age = "'.$age.'",gmail = "'.$gmail.'",tell = "'.$tell.'",img = "'.$img.'",gioitinh = "'.$gioitinh.'",userGV="'.$userGV.'",pass="'.$pass.'" where idgiaovien = '.$idgiaovien;
     }else{
-        $sql ='update giaovien set idgiaovien = "'.$idgiaovien.'",  name = "'.$name.'",adess = "'.$adess.'",age = "'.$age.'",gmail = "'.$gmail.'",tell = "'.$tell.'",img = "'.$img.'",gioitinh = "'.$gioitinh.'" where idgiaovien = '.$idgiaovien;
+        $sql ='update giaovien set idgiaovien = "'.$idgiaovien.'",  name = "'.$name.'",adess = "'.$adess.'",age = "'.$age.'",gmail = "'.$gmail.'",tell = "'.$tell.'",img = "'.$img.'",gioitinh = "'.$gioitinh.'",userGV="'.$userGV.'",pass="'.$pass.'" where idgiaovien = '.$idgiaovien;
     }
     pdo_execute($sql);
 }
