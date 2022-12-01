@@ -4,6 +4,7 @@ include "../view/header.php";
 include "../model/pdo.php";
 include "../model/sinhvien.php";
 include "../model/giaovien.php";
+include "../model/diemdanh.php";
 include "../model/lophoc.php";
 
 session_start();
@@ -217,15 +218,9 @@ if(isset($_GET['act'])){
                 $idlophoc = $_GET['idlophoc'];
                 $dssv= loadsv_by_idlophoc($idlophoc);
                 $dsgv =  loadgv_by_idlophoc($idlophoc);
-                if(isset($_POST['gui']) && ($_POST['gui'])) {
-
-                    $dssvdd= $_POST['checkdd'];
-                    insert_dd($dssvdd);
-                    echo "thanh cong";
-                }
-
                     include "../view/showdiemdanh.php";
                 break;
+
                 case "thoat" :
                     //            echo session_destroy();
                                 session_unset();
@@ -245,7 +240,6 @@ if(isset($_GET['act'])){
   else{
       include "giaodien.php";
   }
-include "../view/all.php";
 include "../view/footer.php";
 
 //   include "footer.php";
