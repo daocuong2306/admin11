@@ -232,6 +232,11 @@ table tr {
 
 }
 
+table tr img {
+    width: 100px;
+    height: 30px;
+}
+
 .STT {
     background-color: #071b64;
     color: #fff;
@@ -497,6 +502,7 @@ tr th {
     width: 100px;
     height: 80px;
 }
+
 .showMain button.seen {
     width: 80px;
     height: 30px;

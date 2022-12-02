@@ -4,6 +4,7 @@ include "../view/header.php";
 include "../model/pdo.php";
 include "../model/sinhvien.php";
 include "../model/giaovien.php";
+include "../model/diemdanh.php";
 include "../model/lophoc.php";
 
 session_start();
@@ -160,10 +161,7 @@ if(isset($_GET['act'])){
 
                 case 'lophoc' :
                     $listlh=loadall_lh();
-                    include "lop_hoc/loadall.php";
-                    
-                
-                    
+                    include "giaodien.php";
 
                     break;
                     case 'loadoneclass' :
@@ -216,9 +214,13 @@ if(isset($_GET['act'])){
                 }
                 include "dangnhap.html";
                 break;
-            case "diemdanh" : 
-               
+            case "diemdanh" :
+                $idlophoc = $_GET['idlophoc'];
+                $dssv= loadsv_by_idlophoc($idlophoc);
+                $dsgv =  loadgv_by_idlophoc($idlophoc);
+                    include "../view/showdiemdanh.php";
                 break;
+
                 case "thoat" :
                     //            echo session_destroy();
                                 session_unset();
@@ -238,7 +240,6 @@ if(isset($_GET['act'])){
   else{
       include "giaodien.php";
   }
-include "../view/all.php";
 include "../view/footer.php";
 
 //   include "footer.php";
