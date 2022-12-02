@@ -3,23 +3,30 @@
     <form action="#" id="classStu">
         <table>
             <tr class="STT">
+                <td>STT</td>
                 <td>Tên Lớp</td>
-                <td>Khóa Học</td>
-                <td>Trạng Thái</td>
-                <td>Giảng Viên</td>
-                <td>Số Lượng</td>
+               
                 <td></td>
             </tr>
             <?php
+            $i=0;
             foreach ($listlh as $lh)  {
                 extract($lh);
+                
+                $i++;
                 $load="index.php?act=loadoneclass&idlophoc=".$idlophoc;
-                echo '  <tr>
+
+                // $giangvien=loadgv_by_idlophoc($idlophoc);
+                // extract($giangvien);
+
+                // echo "<pre>";
+                // echo print_r($giangvien);
+                
+                
+
+                echo '  <tr>        
+                                                <td>'.$i.'</td>
                                                 <td>'.$tenlophoc.'</td>
-                                                <!-- <td>Khóa Học</td>
-                                                <td>Trạng Thái</td>
-                                                <td>Giảng Viên</td>
-                                                <td>Số Lượng</td> -->
                                                 <td><button class="show"><a href="'.$load.'">Xem</a></button></td>
                                              </tr>';
             }

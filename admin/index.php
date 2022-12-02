@@ -263,7 +263,7 @@ if(isset($_GET['act'])){
     }
 
   }
-  else{
+  else{ 
       $listlh=loadall_lh();
       include "giaodien.php";
   }

@@ -36,6 +36,7 @@ Giảng Viên:
                 <?php 
                 foreach($listlichhoc as $value){
                     extract($value);
+                    
                     echo $idlophoc;
                     
                     $lophoc=loadone($idlophoc);
@@ -54,7 +55,7 @@ Giảng Viên:
                     <td>'.$ngay.'</td>
                     <td>'.$tenlophoc.'</td>
                     <td>'.$ca.'</td>
-                      <td>'.$idgiaovien.'</td>
+                      <td>'.$name.'</td>
                 </tr>
                     ';
                 }

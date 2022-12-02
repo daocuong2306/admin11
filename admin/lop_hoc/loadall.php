@@ -48,7 +48,7 @@
                            
                            <tr>
                                 <td>Tên Lớp</td>
-                                <td>Khóa Học</td>
+                                
                                 <td>Trạng Thái</td>
                                 <td>Giảng Viên</td>
                                 <td>Số Lượng</td>
@@ -59,12 +59,15 @@
                             <?php 
                                 foreach ($listlh as $lh)  {
                                     extract($lh);
+                                    $giangvien=loadgv_by_idlophoc($idlophoc);
+                                    extract($giangvien);
+
                                     $load="index.php?act=loadoneclass&idlophoc=".$idlophoc;
                                     echo '  <tr>
                                                 <td>'.$tenlophoc.'</td>
                                                 <!-- <td>Khóa Học</td>
                                                 <td>Trạng Thái</td>
-                                                <td>Giảng Viên</td>
+                                                <td>'.$name.'</td>
                                                 <td>Số Lượng</td> -->
                                                 <td><button class="show"><a href="'.$load.'">Xem</a></button></td>
                                              </tr>';
