@@ -3,5 +3,5 @@
 
 
 </body>
-<script src="../view/check.js"></script>
+<script src="../view/js1.js"></script>
 </html>

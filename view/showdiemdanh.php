@@ -47,7 +47,6 @@ foreach ($dsgv as $value){
 // echo $mangdd[0][1];
     ?>
                 </form>
-<button><a href="index.php?act=showdiemdanh&idlophoc=<?php echo $_GET['idlophoc']?>">Xem điểm danh</a></button>
 
 
 

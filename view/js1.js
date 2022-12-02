@@ -1,10 +1,5 @@
 
-let all = document.querySelector(".all");
-if (all.style.height < "500px") {
-    all.style.height = "1000px";
-} else {
-    all.style.height = "auto";
-}
+
 let icon = document.querySelector(".icon");
 function showMenu() {
     let heading = document.querySelector(".header");
@@ -17,34 +12,34 @@ function showMenu() {
         <input type="checkbox" hidden name="" id="check">
         <div class="menu-mobile">
             <label for="check" class="hi">
-                <img src="./img/Vector.png" alt="">
+                <img src="../img/Vector.png" alt="">
             </label>
             <div class="mau">
 
-                <img src="./img/image 10.png" alt="">
+                <img src="../img/image 10.png" alt="">
                 <div class="menu">
                 <div class="img_text">
-                    <a href="./admintrangchu.html"><img src="./img/image 1.png" alt=""></a>
+                    <a href="./admintrangchu.html"><img src="../img/image 1.png" alt=""></a>
                     <a href="./admintrangchu.html" id="abc">Trang chủ</a>
                 </div>
                 <div class="img_text">
-                    <a href="../admin/index.php?act=lophoc"> <img src="./img/image 3.png" alt=""></a>
+                    <a href="../admin/index.php?act=lophoc"> <img src="../img/image 3.png" alt=""></a>
                     <a href="../admin/index.php?act=lophoc" id="abc">Lớp Học</a>
                 </div>
                 <div class="img_text">
-                    <a href="./indexhocsinh.html"> <img src="./img/image 2.png" alt=""></a>
+                    <a href="./indexhocsinh.html"> <img src="../img/image 2.png" alt=""></a>
                     <a href="./indexhocsinh.html" id="abc">Học Sinh</a>
                 </div>
                 <div class="img_text">
-                    <a href="./indexgiaovien.html"><img src="./img/image 4.png" alt=""></a>
+                    <a href="./indexgiaovien.html"><img src="../img/image 4.png" alt=""></a>
                     <a href="./indexgiaovien.html" id="abc">Giao Viên</a>
                 </div>
                 <div class="img_text">
-                    <a href="./indexkhoahoc.html"><img src="./img/image 5.png" alt=""></a>
+                    <a href="./indexkhoahoc.html"><img src="../img/image 5.png" alt=""></a>
                     <a href="./indexkhoahoc.html" id="abc">Khóa Học</a>
                 </div>
                 <div class="img_text">
-                        <a href="./indexlichhoc.html"><img src="./img/image 5.png" alt=""></a>
+                        <a href="./indexlichhoc.html"><img src="../img/image 5.png" alt=""></a>
                         <a href="./indexlichhoc.html" id="abc">lich hoc</a>
 
                     </div>
