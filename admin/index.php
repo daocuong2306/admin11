@@ -1,6 +1,6 @@
 <?php
 include "../view/header.php";
-
+include "../model/lichhoc.php";
 include "../model/pdo.php";
 include "../model/sinhvien.php";
 include "../model/giaovien.php";
@@ -198,7 +198,32 @@ if(isset($_GET['act'])){
                         break;
                        
 
+                        case 'addlichhoc' :
+                            // echo "<pre>";
+                            // echo print_r($_POST);
+                            $listlh=loadall_lh();
 
+                            if(isset($_POST['themmoi'])&& ($_POST['themmoi'])){
+                                $idlophoc = $_POST['idlophoc'];
+                                
+                                $ca=$_POST['ca'];
+                                $ngay = $_POST['ngay'];
+                                insert_lichhoc($idlophoc,$ca,$ngay);
+                                $thongbao = "thêm thành công";
+                            }
+                            
+                             include "lichhoc/add.php";
+                            break;  
+                        case 'listlichhoc' :
+                            // $listlh=loadall_lh();
+                            $listlichhoc=loadall_lichhoc();
+                            include "lichhoc/list.php";
+                            break;
+                            
+                        case 'lichhocbylophoc':
+                        
+
+                            break;
             case  "dangnhap" :
                 if(isset($_POST['dangnhap']) && ($_POST['dangnhap']) ) {
                     $user = $_POST["user"];
@@ -232,12 +257,14 @@ if(isset($_GET['act'])){
                     include "giao_vien/list.php";
                     break;
          default:
+         $listlh=loadall_lh();
          include "giaodien.php";
          break;
     }
 
   }
   else{
+      $listlh=loadall_lh();
       include "giaodien.php";
   }
 include "../view/footer.php";
