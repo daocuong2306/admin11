@@ -58,7 +58,7 @@ if(isset($_GET['act'])){
                include "sinh_vien/list.php";
                 break;
             case 'listsv' :
-//                $sinhvien = loadall_sv();
+     ~          $sinhvien = loadall_sv();
                     include "../view/showLop.php";
 
                     break;

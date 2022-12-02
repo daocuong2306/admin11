@@ -18,59 +18,32 @@
                 <tr>
                     <td>Học Sinh</td>
                     <td>SDT</td>
-                    <td>Tên Phụ Huynh</td>
+                    <td>Tuổi</td>
+                    <td>ảnh</td>
                     <td>Địa chỉ</td>
                     <td></td>
                 </tr>
-                <tr>
-                    <td>Hoàng Công Tiên</td>
-                    <td>0964495899</td>
-                    <td>Runing</td>
-                    <td>Đào Mạnh Cường</td>
-                    <td><button class="edit">Sửa</button></td>
+                <?php
+                foreach($sinhvien as $value){
+                    extract($value);
+                    $suasv="index.php?act=suasv&id=".$idsinhvien;
+                             $xoasv="index.php?act=xoasv&id=".$idsinhvien;
+                             $avatar = "../uploadimg/".$img;
+                    $anh="../uploadimg/".$img;
+                    echo'
+                    <tr>
+                    <td>'.$name.'</td>
+                    <td>'.$tell.'</td>
+                    <td>'.$age.'</td>
+                    <td><img src="'.$anh.'"></td>
+                    <td>'.$dress.'</td>
+                    <td><button class="edit" ><a href="'.$suasv.'">sửa</a></button></td>
+                    <td><button class="edit" ><a href="'.$xoasv.'">xóa</a></button></td>
                 </tr>
-                <tr>
-                    <td>Hoàng Công Tiên</td>
-                    <td>0964495899</td>
-                    <td>Runing</td>
-                    <td>Đào Mạnh Cường</td>
-                    <td><button class="edit">Sửa</button></td>
-                </tr>
-                <tr>
-                    <td>Hoàng Công Tiên</td>
-                    <td>0964495899</td>
-                    <td>Runing</td>
-                    <td>Đào Mạnh Cường</td>
-                    <td><button class="edit">Sửa</button></td>
-                </tr>
-                <tr>
-                    <td>Hoàng Công Tiên</td>
-                    <td>0964495899</td>
-                    <td>Runing</td>
-                    <td>Đào Mạnh Cường</td>
-                    <td><button class="edit">Sửa</button></td>
-                </tr>
-                <tr>
-                    <td>Hoàng Công Tiên</td>
-                    <td>0964495899</td>
-                    <td>Runing</td>
-                    <td>Đào Mạnh Cường</td>
-                    <td><button class="edit">Sửa</button></td>
-                </tr>
-                <tr>
-                    <td>Hoàng Công Tiên</td>
-                    <td>0964495899</td>
-                    <td>Runing</td>
-                    <td>Đào Mạnh Cường</td>
-                    <td><button class="edit">Sửa</button></td>
-                </tr>
-                <tr>
-                    <td>Hoàng Công Tiên</td>
-                    <td>0964495899</td>
-                    <td>Runing</td>
-                    <td>Đào Mạnh Cường</td>
-                    <td><button class="edit">sửa</button></td>
-                </tr>
+                ';
+                }
+                ?>
+               
 
             </table>
         </form>
