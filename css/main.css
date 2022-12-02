@@ -15,7 +15,12 @@
     position: absolute;
     height: auto;
 }
-
+/*sua icon*/
+.fa-solid {
+    margin-left: 20px;
+    font-size: 20px;
+    color: #fff;
+}
 .menu-mobile {
     position: fixed;
     background-color: #fff;

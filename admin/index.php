@@ -245,7 +245,14 @@ if(isset($_GET['act'])){
                 $dsgv =  loadgv_by_idlophoc($idlophoc);
                     include "../view/showdiemdanh.php";
                 break;
+        case "showallgv" :
+            include "../view/allGV.php";
 
+            break;
+        case "showallsv" :
+            include "../view/allhs.php";
+
+            break;
                 case "thoat" :
                     //            echo session_destroy();
                                 session_unset();
