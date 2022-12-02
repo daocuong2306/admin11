@@ -28,10 +28,12 @@
                 </label>
                 <div class="xinchao">
                     <p>xin chào ........</p>
+                    <button><a href="index.php?act=thoat">Thoat</a></button>
                 </div>
             </div>
             <div class="hass">
                 <h2>Cơ Sở</h2>
+
             </div>
             <div class="select">
                 <input type="text" placeholder="Tìm kiếm trên lớp" class="_class">
