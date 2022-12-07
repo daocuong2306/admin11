@@ -1,6 +1,6 @@
 <?php
-function insert_sv($name,$dress,$age,$tell,$img,$gioitinh,$idlophoc){
-    $spl = "insert into sinhvien values (null,'$name','$dress','$age','$tell','$img','$gioitinh','$idlophoc')";
+function insert_sv($name,$dress,$age,$tell,$img,$gioitinh,$idlophoc,$userGV,$pass){
+    $spl = "insert into sinhvien values (null,'$name','$dress','$age','$tell','$img','$gioitinh','$idlophoc','$userGV','$pass')";
     pdo_execute($spl);
 }
 function loadall_sv(){
@@ -17,11 +17,11 @@ function delete_sv($idsinhvien){
     $sql = "delete from sinhvien where idsinhvien =".$idsinhvien;
     pdo_execute($sql);
 }
-function update_sv($idsinhvien,$name,$dress,$age,$tell,$img,$gioitinh){
+function update_sv($idsinhvien,$name,$dress,$age,$tell,$img,$gioitinh,$userGV,$pass){
     if($img !=" "){
-        $sql ='update sinhvien set idsinhvien = "'.$idsinhvien.'",  name = "'.$name.'",dress = "'.$dress.'",age = "'.$age.'",tell = "'.$tell.'",img = "'.$img.'",gioitinh = "'.$gioitinh.'" where idsinhvien = '.$idsinhvien;
+        $sql ='update sinhvien set idsinhvien = "'.$idsinhvien.'",  name = "'.$name.'",dress = "'.$dress.'",age = "'.$age.'",tell = "'.$tell.'",img = "'.$img.'",gioitinh = "'.$gioitinh.'",userSV="'.$userSV.'",pass="'.$pass.'" where idsinhvien = '.$idsinhvien;
     }else{
-        $sql ='update sinhvien set idsinhvien = "'.$idsinhvien.'",  name = "'.$name.'",dress = "'.$dress.'",age = "'.$age.'",tell = "'.$tell.'",img = "'.$img.'",gioitinh = "'.$gioitinh.'" where idsinhvien = '.$idsinhvien;
+        $sql ='update sinhvien set idsinhvien = "'.$idsinhvien.'",  name = "'.$name.'",dress = "'.$dress.'",age = "'.$age.'",tell = "'.$tell.'",img = "'.$img.'",gioitinh = "'.$gioitinh.'",userSV="'.$userSV.'",pass="'.$pass.'" where idsinhvien = '.$idsinhvien;
     }
     pdo_execute($sql);
 }

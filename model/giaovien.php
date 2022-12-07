@@ -8,7 +8,7 @@ function insert_gv($name,$adess,$age,$gmail,$tell,$img,$gioitinh,$tenlophoc,$use
     $giaovien=pdo_query($result);
  return $giaovien;
 }
-function update_gv($idgiaovien,$name,$adess,$age,$gmail,$tell,$img,$gioitinh){
+function update_gv($idgiaovien,$name,$adess,$age,$gmail,$tell,$img,$gioitinh,$tenlophoc,$userGV,$pass){
     if($img !=" "){
         $sql ='update giaovien set idgiaovien = "'.$idgiaovien.'",  name = "'.$name.'",adess = "'.$adess.'",age = "'.$age.'",gmail = "'.$gmail.'",tell = "'.$tell.'",img = "'.$img.'",gioitinh = "'.$gioitinh.'",userGV="'.$userGV.'",pass="'.$pass.'" where idgiaovien = '.$idgiaovien;
     }else{

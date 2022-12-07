@@ -81,26 +81,7 @@ if(isset($_GET['act'])){
             // giáo viên
             case 'addgv' :
                 if(isset($_POST['themmoi'])&& ($_POST['themmoi'])){
-                    $name = $_POST['name'];
-                    $adess = $_POST['dress'];
-                    $age = $_POST['age'];
-                    $tell = $_POST['tell'];
-                    $idlophoc = $_POST['idlophoc'];
-                    $img=$_FILES['img']['name'];
-                    $gmail = $_POST['gmail'];
-                    $target_dir = "../uploadimg/";
-                    $target_file = $target_dir.$img;
-                    if(move_uploaded_file($_FILES['img']['tmp_name'], $target_file)){
-    //                      echo "ảnh của bạn đã được thêm thành công ";
-                    }else{
-    //                      echo 'sorry, ảnh của bạn ko được uplead';
-                    }
-                    $gioitinh = $_POST['gioitinh'];
-                    $idlophoc = $_POST['idlophoc'];
-                    $userGV=$_POST['userGV'];
-                    $pass=$_POST['pass'];
-                    insert_gv($name,$adess,$age,$gmail,$tell,$img,$gioitinh,$idlophoc,$userGV,$pass);
-                    $thongbao = "thêm thành công";
+                     
                 }
                 $listlophoc=loadall_lh();
                 
@@ -181,31 +162,16 @@ if(isset($_GET['act'])){
                     case 'listlh' :
                         $listlh=loadall_lh();
                         include "lop_hoc/list.php";
-                        
-                    
-    //                     if(isset($_GET['idlophoc']) && ($_GET['idlophoc']>0)) {
-    // // echo "<pre>";
-    // // echo print_r($_GET);
-    //                         $idlophoc = $_GET['idlophoc'];
-    //                         $dsgv = loadgv_by_idlophoc($idlophoc);
-    //                         $dssv = loadsv_by_idlophoc($idlophoc);
-    //                         $lophoc=loadone($idlophoc);
-    //                         include "lop_hoc/loadall.php";
-                            
-    //                     }
-                        
-    
                         break;
-                       
-
                         case 'addlichhoc' :
                             // echo "<pre>";
                             // echo print_r($_POST);
-                            $listlh=loadall_lh();
-
+                            // $listlh=loadall_lh();
+                            $idlophoc=$_GET['idlophoc'];
+                            $lophoc=loadone($idlophoc);
                             if(isset($_POST['themmoi'])&& ($_POST['themmoi'])){
-                                $idlophoc = $_POST['idlophoc'];
-                                
+                                // $idlophoc = $_POST['idlophoc'];
+                                $idlophoc=$_GET['idlophoc'];
                                 $ca=$_POST['ca'];
                                 $ngay = $_POST['ngay'];
                                 insert_lichhoc($idlophoc,$ca,$ngay);
@@ -215,8 +181,10 @@ if(isset($_GET['act'])){
                              include "lichhoc/add.php";
                             break;  
                         case 'listlichhoc' :
-                            // $listlh=loadall_lh();
-                            $listlichhoc=loadall_lichhoc();
+                            $idlophoc=$_GET['idlophoc'];
+                            $lichhoc=load_lichhoc_by_idlophoc($idlophoc);
+                            $lophoc=loadone($idlophoc);
+                            $gv=loadgv_by_idlophoc($idlophoc);
                             include "lichhoc/list.php";
                             break;
                             

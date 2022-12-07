@@ -17,27 +17,33 @@ font-size:40px;
 boder-radius:5px;
 border-radius: 5px;
 ">
-    <h1>Tạo Lịch Học</h1>
+    <?php 
+    
+extract($lophoc)    
+    ?>
+    <h3>Tạo Lịch Học lớp <?php echo $tenlophoc ?></h3>
+    
 </div>
 <div class="rowformcontenr">
-    <form action="index.php?act=addlichhoc" method="post"  >
+    <form action="index.php?act=addlichhoc&idlophoc=<?php echo $idlophoc?>" method="post"  >
         
-    <select name="idlophoc">
+    <!-- <select name="idlophoc">
                 <?php
-                foreach ($listlh as $lophoc) {
-                    extract($lophoc);
-                    echo '<option value="'.$idlophoc.'"> '.$tenlophoc.' </option>';
+                // $_POST['idlophoc']=$_GET['idlophoc']
+                // foreach ($listlh as $lophoc) {
+                //     extract($lophoc);
+                //     echo '<option value="'.$idlophoc.'"> '.$tenlophoc.' </option>';
 
-                } 
+                // } 
                 ?>
-    </select><br>
+    </select><br> -->
     Ngày học : <input type="date" name="ngay" id="">
     ca : <input type="text" name="ca" id="">
         
         <div class="rowsubmit">
             <input type="submit" name="themmoi" id="" value="thêm mới">
             <input type="reset" name="" id="" value="nhập lại">
-            <a href="index.php?act=listlichhoc"><input type="button" name="" id="" value="danh sách"></a>
+            <a href="index.php?act=listlichhoc&idlophoc=<?php echo $idlophoc;?>"><input type="button" name="" id="" value="danh sách"></a>
         </div>
         <?php
         if(isset($thongbao)&& $thongbao!= ""){

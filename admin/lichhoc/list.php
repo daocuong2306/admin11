@@ -1,73 +1,54 @@
-<div class="row_one">
-    <!-- lớp học :
-    <?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../form.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="rowformtile" style="background-color: blue; 
+padding-left:40px;
+color:white;
+font-size:40px;
+boder-radius:5px;
+border-radius: 5px;
+">
+    <?php 
     
-        extract($lophoc);
-        echo $tenlophoc."<br>";
+
+    ?>
+    <h3> Lịch Học lớp <?php echo $lophoc['tenlophoc'] ?></h3>
     
-     ?>
-Giảng Viên:
-            <?php 
+    Tên giáo viên:<?php 
             
-            foreach ($dsgv as $value){
+            foreach ($gv as $value){
                 extract($value);
-                // echo $img_path.$anh_sanpham;
                 echo $name."<br>";
             }
-            
-            ?> -->
-            <?php 
-            foreach($listlichhoc as $value){
-                extract($value);
-                echo'
-                ngay: '.$ngay.'
-                ca :'.$ca.'
-                <br>
-                ';
-            }
             ?>
-            <table>
-                <tr>
-                    <td>ngày</td>
-                    <td>lớp</td>
-                    <td>ca</td>
-                    <td>giảng viên</td>
-                </tr>
-                <?php 
-                foreach($listlichhoc as $value){
-                    extract($value);
-                    
-                    echo $idlophoc;
-                    
-                    $lophoc=loadone($idlophoc);
-                    extract($lophoc);
-                    
-                    $giaovien=loadgv_by_idlophoc($idlophoc);
-                    extract($giaovien);
-
-                    echo "<pre>";
-                    echo print_r($value);
-                    echo print_r($lophoc);
-                    echo print_r($giaovien);
-                    
-                    echo '
-                    <tr>
-                    <td>'.$ngay.'</td>
-                    <td>'.$tenlophoc.'</td>
-                    <td>'.$ca.'</td>
-                      <td>'.$name.'</td>
-                </tr>
-                    ';
-                }
-                
-                ?>
-                <tr>
-                    <td>ngày</td>
-                    <td>lớp</td>
-                    <td>ca</td>
-                    <td>giảng viên</td>
-                </tr>
-                
-            </table>
-           
+    
 </div>
+<table border="1">
+    <tr>
+<td>Ngày Học</td>
+<td>Ca Học</td>
+<td>Số Buổi Học</td>
+<td></td>
+</tr>
+ <?php foreach($lichhoc as $value){ 
+    extract($value);
+    // if(date_parsr($ngay) >= date_parse(date())){
+    echo '
+    <tr>
+    <td>'.$ngay.'</td>
+    <td>'.$ca.'</td>
+    <td>Số Buổi Học</td>
+    <td></td>
+    </tr>';
+
+} ?>
+</table>
