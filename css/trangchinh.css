@@ -1,0 +1,451 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+#contentner{
+    background-color: #F7F7F7;
+}
+
+
+.boxcenter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#header {
+    background-color: #BCEAD5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.ol {
+    background: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+
+#main-menu{
+    margin-left: -100px;
+    color: #000;
+
+}
+#logo img {
+    width: 100%;
+}
+
+ul li {
+    display: inline-block;
+    padding: 0 16px;
+}
+
+li a {
+    text-decoration: none;
+    color: #5D5D5D;
+    font-size: 18px;
+}
+
+li:hover a {
+    color: #F54748;
+}
+
+.menu-mobile {
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-width: 320px;
+    transform: translate(-100%);
+}
+
+#check:checked~.menu-mobile {
+    transform: translate(0%);
+
+    transition: ease-in-out0.5s;
+}
+.mmm{
+   
+    padding: 10px ;
+    background-color: #8EC3B0;
+    text-align: center;
+    border-radius:5px;
+}
+.mmm a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* 
+#search-box {
+    background: #fff;
+    border-radius: 30px;
+}
+
+#search-box #search-text {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    width: 0;
+    padding: 0;
+    transition: all 0.25s ease-in-out;
+}
+
+#search-box:hover #search-text {
+    width: 200px;
+
+}
+
+#search-box #search-btn {
+    background-color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+
+}
+
+
+#toggle_sidebar {
+    display: none;
+} */
+
+.mmm {
+    position: relative;
+    margin-right: 30px;
+}
+
+.sidebar {
+    display: none;
+
+}
+
+#toggle_sidebar:checked~.sidebar {
+    display: block;
+
+}
+
+
+#benner img {
+    width: 100%;
+    height: 600px;
+}
+
+#header h3:hover {
+    background-color: #fff;
+}
+
+#header h3 {
+    padding: 10px;
+}
+
+#contenn {
+    padding: 20px 100px;
+}
+
+
+.text {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    grid-gap: 30px;
+
+}
+
+.chu p {
+    color: #000;
+    padding: 40px 40px;
+    font-size: 17px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 20px;
+
+}
+
+.chu p:hover {
+    color: #fff;
+    background-color: #DEF5E5;
+    padding: 40px 40px;
+}
+
+#contenn h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.cackhoahoc {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    
+    padding: 50px;
+}
+
+.khoahoc img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.chu p{
+    margin-top: 20px;
+}
+.chuuu {
+    padding: 10px 20px;
+}
+
+.chuuu h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.chuuu h5 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.chuuu p {
+    margin-top: 10px;
+}
+
+.anhchu {
+    border: 1px solid;
+    border-radius: 10px;
+}
+.lolo{
+    text-align: center;
+}
+
+.lolo a {
+
+    padding: 10px 10px;
+   
+}
+
+.lolo a {
+    width: 300px;
+  
+    border-radius: 1px;
+    border: 1px solid #F54748;
+}
+
+.lolo a {
+    text-decoration: none;
+    color: rgb(208, 73, 73);
+}
+
+.lolo a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.cc img {
+    width: 100%;
+
+}
+
+.llll img {
+    margin-top: 20px;
+
+    width: 100%;
+    height: 700px;
+}
+
+.delenne {
+
+    width: 1000px;
+    text-align: center;
+    background-color: #DEF5E5;
+    padding: 20px 20px;
+}
+
+.concac {
+    position: absolute;
+    z-index: 1000;
+    margin-left: 180px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+
+}
+
+
+.delenne h4 {
+    padding: 30px 0px;
+}
+
+.delenne p {
+    margin-top: 10px;
+}
+
+.cotdelen {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px
+}
+
+.ban i {
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.pl a {
+    width: 500px;
+    border: 1px solid #F54748;
+    text-align: center;
+
+
+
+
+}
+
+.pl a {
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(137, 10, 10);
+
+}
+
+.pl {
+    margin-top: 20px;
+}
+.on{
+    text-align: center;
+    background-color: #9ED5C5;
+    padding: 50px 15px;
+    color:#000;
+}
+.on p{
+    margin-bottom: 30px;
+}
+.on a{
+    font-size: 15px;
+    text-decoration: none;
+    padding: 5px 5px;
+    background-color: #fff;
+    border: 1px solid ;
+    color: #401010;
+    border-radius: 3px;
+}
+.on{
+    margin-top: 50px;
+}
+.mlk{
+    height: 1000px;
+    
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+
+}
+.gancuoi{
+ width: 800px;
+ margin-left: 270px;
+ 
+}
+.borderduoi{
+    padding: 1000px;
+    padding: 20px;
+    border-bottom: 1px solid;
+}
+.borderduoi{
+    display: grid;
+    grid-template-columns: 1fr 5px;
+}
+
+.borderduoi p{
+    margin-left: -20px;
+
+}
+.borderduoi h3{
+    margin-left: -20px;
+}
+.lololol{
+    margin-left: 160px;
+    margin-top: 100px;
+    width: 1000px;
+    border-top: 1px solid;
+}
+.lololol h3{
+    margin: 20px;
+}
+.lololol p{
+    margin: 10px;
+}
+form{
+    margin: 10px;
+}
+.lololol button{
+   padding: 8px;
+   background-color: #9ED5C5;
+   color: #fff;
+  margin-left: 7px;
+}
+.cott4{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.cotne h3{
+    margin-bottom: 15px;
+}
+
+footer{
+    
+    font-size: 12px;
+    background-color:  #9ED5C5;
+}
+footer{
+    padding: 10px;
+    
+    display: grid;
+    grid-template-columns: 550px 1fr;
+}
+.alo{
+    display: grid;
+    grid-template-columns: 20px 1fr;
+}
+.fa-location-dot{
+    margin-left: 5px;
+
+   margin-top: 25px;
+}
+.alo p{
+    margin-top: 2px;
+
+}
+.lienhe{
+    display: grid;
+    grid-template-columns: 20px 1fr;
+}
+.fa-phone{
+   margin-top: 25px;
+}
+.fa-envelope{
+    margin-top: 25px;
+}
+.lienhe p{
+    font-size: 15px;
+} 
+ul{
+    margin-left: 50px;
+}
+.dich{
+    margin-left: 100px;
+}
+.hihi p{
+    margin-top: 20px;
+}
+.hihi{
+    margin-left: 30px;
+    border-right: 1px solid;
+}
