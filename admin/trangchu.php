@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="../view/css.css">
+    <link rel="stylesheet" href="../css.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -74,9 +74,11 @@
         </div>
         <div class="kkk">
             <h3>Trang Chủ</h3>
+            <button ><a href="index.php?act=addtt">thêm mới tin tức</a></button>
 
             <i class="fa-solid fa-house"></i>
         </div>
+
         <div class="conten">
             <div class="chu">
                 <div class="text">
@@ -140,6 +142,7 @@
             </div>
 
         </div>
+
         <footer>
             <div class="hihi">
                 <div class="anh">
@@ -181,6 +184,10 @@
 
     </div>
 </div>
+<!-- <div class="of_admin">
+    <button>them</button>
+    
+</div> -->
 
 
 </div>

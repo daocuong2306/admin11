@@ -6,6 +6,7 @@ include "../model/sinhvien.php";
 include "../model/giaovien.php";
 include "../model/diemdanh.php";
 include "../model/lophoc.php";
+include "../model/tintuc.php";
 
 session_start();
 if(isset($_GET['act'])){
@@ -187,11 +188,49 @@ if(isset($_GET['act'])){
                             $gv=loadgv_by_idlophoc($idlophoc);
                             include "lichhoc/list.php";
                             break;
-                            
-                        case 'lichhocbylophoc':
+                    case 'addtt':
+                        if(isset($_POST['themmoi'])&& ($_POST['themmoi'])){
+                            $tieude = $_POST['tieude'];
+                            $noidung = $_POST['noidung'];
+                            inserttt($tieude,$noidung);
+                            $thongbao = "thêm thành công";
+                        }
+                        include "tintuc/add.php";
+
+                        break;
+                    case 'listtt':
+                        $listtintuc=loadall_tt();
+                        include "tintuc/list.php";
+                        break;
+                    case 'xoatt':
+                        if(isset($_GET['id']) && ($_GET['id']>0)) {
+                            deletett($_GET['id']);
+                        }
+                        $listtintuc=loadall_tt();
+                        include "tintuc/list.php";
+                            break;
+                    case 'suatt':
+                        if(isset($_GET['id']) && ($_GET['id']>0)){
+                            $suatt = loadonett($_GET['id']);
+                        
+                            include "tintuc/update.php";
+                        }
+                        break;
+                    case 'updatett':
+                        if(isset($_POST['capnhat']) && ($_POST['capnhat']!='') ){
+                            $idtintuc=$_POST['idtintuc'];
+                            $tieude = $_POST['tieude'];
+                            $noidung = $_POST['noidung'];
+                            updatett($idtintuc,$tieude,$noidung);
+                            $thongbao = "sửa thành công";
+
+                        }
+                        $listtintuc=loadall_tt();
+                        include "tintuc/list.php";
+
+                        break;
                         
 
-                            break;
             case  "dangnhap" :
                 if(isset($_POST['dangnhap']) && ($_POST['dangnhap']) ) {
                     $user = $_POST["user"];

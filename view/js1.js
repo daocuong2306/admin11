@@ -19,8 +19,8 @@ function showMenu() {
                 <img src="../img/image 10.png" alt="">
                 <div class="menu">
                 <div class="img_text">
-                    <a href="./admintrangchu.html"><i class="fa-solid fa-house-user"></i></a>
-                    <a href="./admintrangchu.html" id="abc">Trang chủ</a>
+                    <a href="../admin/trangchu.php"><i class="fa-solid fa-house-user"></i></a>
+                    <a href="../admin/trangchu.php" id="abc">Trang chủ</a>
                 </div>
                 <div class="img_text">
                     <a href="../admin/index.php?act=lophoc"<i class="fa-solid fa-table"></i> </a>
