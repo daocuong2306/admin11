@@ -9,6 +9,7 @@
                 <td></td>
             </tr>
             <?php
+            if(isset($idgiaovien)) {
             $i=0;
             foreach ($listlh as $lh)  {
                 extract($lh);
@@ -29,6 +30,9 @@
                                                 <td>'.$tenlophoc.'</td>
                                                 <td><button class="show"><a href="'.$load.'">Xem</a></button></td>
                                              </tr>';
+            } }
+            else {
+                //show ra nhưng lớp có học sinh theo học
             }
             ?>
 

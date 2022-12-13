@@ -37,9 +37,7 @@ switch ($check) {
         break;
     case "hocsinh":
         if(isset($_SESSION["user"])) {
-            include "view/header.php";
-            include "view/all.php";
-            include "view/footer.php";
+            header('Location: admin/index.php');
         } else {
             include "view/login.php";
         }

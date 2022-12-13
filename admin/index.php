@@ -165,6 +165,7 @@ if(isset($_GET['act'])){
                         include "lop_hoc/list.php";
                         break;
                         case 'addlichhoc' :
+                            if(isset($idgiaovien)) {
                             // echo "<pre>";
                             // echo print_r($_POST);
                             // $listlh=loadall_lh();
@@ -179,7 +180,10 @@ if(isset($_GET['act'])){
                                 $thongbao = "thêm thành công";
                             }
                             
-                             include "lichhoc/add.php";
+                             include "lichhoc/add.php"; }
+                            else {
+                                //show list lịch học
+                            }
                             break;  
                         case 'listlichhoc' :
                             $idlophoc=$_GET['idlophoc'];
@@ -247,10 +251,14 @@ if(isset($_GET['act'])){
                 include "dangnhap.html";
                 break;
             case "diemdanh" :
+                if(isset($idgiaovien)) {
                 $idlophoc = $_GET['idlophoc'];
                 $dssv= loadsv_by_idlophoc($idlophoc);
                 $dsgv =  loadgv_by_idlophoc($idlophoc);
+                    include "../view/showdiemdanh.php"; }
+                else {
                     include "../view/showdiemdanh.php";
+                }
                 break;
         case "showallgv" :
             include "../view/allGV.php";
@@ -263,7 +271,7 @@ if(isset($_GET['act'])){
                 case "thoat" :
                     //            echo session_destroy();
                                 session_unset();
-                                    header("location: ../index.php");
+                                header("location: ../index.php");
                                 break;
             break;
                 case 'listgv' :

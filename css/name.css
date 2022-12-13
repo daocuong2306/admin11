@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* @media(min-width:768px){
+    .tong{
+        margin-left: 300px;
+    }
+} */
+/*
+ .togo{
+    position: absolute;
+    top: 20px;
+    right: -45px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+   cursor: pointer;
+   transition: linear 0.2s;
+
+   border-radius: 0px 10px 10px  0px;
+}
+ .togo{
+   font-size: 1.5cm;
+   transition: linear 0.2S;
+    color: aquamarine;
+}
+ .togo:hover{
+    background-color: aqua;
+}
+ .togo:hover h5{
+    color: aliceblue;
+} */
+
+
+
+
+
+.hi img :hover{
+    width: calc(100%-300px);
+
+}
+
+
+.contenner{
+    width: 1440px;
+}
+.xinchao p{
+    margin: 10px;
+    margin-left: 1200px;
+
+}
+.xinchao{
+    border-bottom: 1px solid;
+}
+.kkk{
+    margin-left: 200px;
+    display: grid;
+    grid-template-columns: 115px   1fr;
+}
+.kkk {
+    margin: 30px;
+
+}
+.fa-house{
+    margin-top: 5px;
+
+}
+.fa-medal{
+    margin-top: 2px;
+}
+
+.chu{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    background-color:#F7F7F7;
+
+}
+
+
+.chu a{
+    text-decoration: none;
+    color: blue;
+
+}
+
+.noidung h4{
+    margin: 20px ;
+    color: blue;
+
+}
+.the {
+    margin-left: 15px;
+    margin: 30px;
+}
+
+.text{
+    border:1px solid ;
+}
+.the1{
+    margin-left: 15px;
+    margin: 30px;
+    color: rgb(255, 2, 2);;
+}
+.the1 a{
+    color: rgb(255, 2, 2);;
+}
+
+.th{
+    border: 1px solid;
+    text-align: center;
+    margin-left: 30px;
+    width: 100px;
+    background-color: blue;
+    padding: 3px;
+    border-radius: 5px;
+
+}
+.th a{
+    color: #fff;
+}
+footer{
+    font-size: 15px;
+}
+footer{
+    padding: 10px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 550px 1fr;
+}
+.alo{
+    display: grid;
+    grid-template-columns: 20px 1fr;
+}
+.fa-location-dot{
+    margin-left: 5px;
+
+    margin-top: 25px;
+}
+.alo p{
+    margin-top: 2px;
+
+}
+.lienhe{
+    display: grid;
+    grid-template-columns: 20px 1fr;
+}
+.fa-phone{
+    margin-top: 25px;
+}
+.fa-envelope{
+    margin-top: 25px;
+}
+.lienhe p{
+    font-size: 15px;
+}
+ul{
+    margin-left: 50px;
+}
+.dich{
+    margin-left: 100px;
+}
+.hihi p{
+    margin-top: 20px;
+}
+.hihi{
+    margin-left: 30px;
+    border-right: 1px solid;
+}
+
+
+.menu-mobile {
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-width: 320px;
+    transform: translate(-100%);
+    transition: 0.5s;
+}
+
+#check:checked~.menu-mobile {
+    transform: translate(0%);
+
+    transition: ease-in-out 0.5s;
+}
+
+
+.icon img {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.icon:focus .contenner {
+    width: 10;
+}
+
+.hi {
+    position: absolute;
+    width: 300px;
+    margin-left: 10px;
+    margin-top: 10px;
+    z-index: 1000;
+
+}
+
+
+.mau {
+    background-color: aqua;
+    height: 1000px;
+
+}
+
+.mau img {
+    height: 160px 160px;
+}
+
+
+.img_text {
+    display: grid;
+    grid-template-columns: 86px 1fr;
+    margin-top: 30px;
+}
+
+.img_text img {
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+#abc {
+    text-decoration: none;
+    color: #000;
+    margin-top: 14px;
+
+}
+.hi img{
+    position: absolute;
+    z-index: 1000;
+    margin-top: -5px;
+}
+
