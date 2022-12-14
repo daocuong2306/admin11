@@ -82,10 +82,26 @@ if(isset($_GET['act'])){
             // giáo viên
             case 'addgv' :
                 if(isset($_POST['themmoi'])&& ($_POST['themmoi'])){
-                     
+                $name = $_POST['name'];
+                $dress = $_POST['dress'];
+                $age = $_POST['age'];
+                $tell = $_POST['tell'];
+                $idlophoc = $_POST['idlophoc'];
+                $userGV = $_POST['userGV'];
+                $pass = $_POST['pass'];
+                $img=$_FILES['img']['name'];
+                $target_dir = "../uploadimg/";
+                $target_file = $target_dir.$img;
+                if(move_uploaded_file($_FILES['img']['tmp_name'], $target_file)){
+//                      echo "ảnh của bạn đã được thêm thành công ";
+                }else{
+//                      echo 'sorry, ảnh của bạn ko được uplead';
                 }
-                $listlophoc=loadall_lh();
-                
+                $gioitinh = $_POST['gioitinh'];
+                insert_gv($name,$adess,$age,$gmail,$tell,$img,$gioitinh,$tenlophoc,$userGV,$pass);
+                $thongbao = "thêm thành công";
+            }
+            $listlophoc=loadall_lh();
                 include "giao_vien/add.php";
                 
                 break;
@@ -140,7 +156,16 @@ if(isset($_GET['act'])){
                             include "giao_vien/list.php";
                             break;
                 // dang nhap
+                case 'addlh':
+                    if(isset($_POST['themmoi'])&& ($_POST['themmoi'])){
+                        // $idlophoc = $_POST['idlophoc'];
+                        $tenlophoc=$_POST['tenlophoc'];
+                        insert_lh($tenlophoc);
+                        $thongbao = "thêm thành công";
+                    }
+                   include 'lop_hoc/add.php';
 
+                    break;
                 case 'lophoc' :
                     $listlh=loadall_lh();
                     include "giaodien.php";
@@ -164,6 +189,7 @@ if(isset($_GET['act'])){
                         $listlh=loadall_lh();
                         include "lop_hoc/list.php";
                         break;
+
                         case 'addlichhoc' :
                             if(isset($idgiaovien)) {
                             // echo "<pre>";
