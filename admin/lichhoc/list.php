@@ -51,4 +51,4 @@ border-radius: 5px;
 }
 extract($lichhoc); ?>
 </table>
-<button><a href="index.php?act=addlichhoc&idlophoc=<?php echo $idlophoc?>&idlichhoc=<?php echo $idlichhoc?>">thêm lịch học</a></button>
+<button><a href="index.php?act=addlichhoc&idlophoc=<?php echo $idlophoc?>&idlichhoc=<?php echo $idlichhoc?>" class="addlh">thêm lịch học</a></button>

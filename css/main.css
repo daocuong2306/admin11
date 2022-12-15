@@ -12,7 +12,7 @@
     }
 } */
 .contenner {
-    position: absolute;
+    /*position: absolute;*/
     height: auto;
 }
 /*sua icon*/
@@ -20,6 +20,31 @@
     margin-left: 20px;
     font-size: 20px;
     color: #fff;
+}
+.bentrong  .check {
+    margin-left: 1400px;
+    border-radius: 5px;
+    background-color: #071b64;
+}
+.bentrong  button .addlh {
+    width: 400px;
+    height: 50px;
+
+
+    color: #F7F7F7;
+    text-decoration: none;
+
+}
+
+.img_text button {
+    background-color: #ffffff;
+    color: #000;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+}
+.img_text button a {
+    color: #000000 !important;
 }
 .menu-mobile {
     position: fixed;

@@ -55,12 +55,15 @@
                         </div>
                         <?php                         }
                         ?>
+
                         <div class="img_text">
                             <a href="./indexlichhoc.html"><i class="fa-solid fa-id-card"></i></a>
                             <a href="./indexlichhoc.html" id="abc">lich hoc</a>
 
                         </div> -->
-
+                        <div class="img_text">
+                            <button> <a href="index.php?act=thoat" id="abc">Thoat</a></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -73,7 +76,7 @@
                 </label>
                 <div class="xinchao">
                     <p>xin chào ........</p>
-                    <button><a href="index.php?act=thoat">Thoat</a></button>
+
                 </div>
             </div>
             <div class="hass">

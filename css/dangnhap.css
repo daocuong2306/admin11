@@ -42,11 +42,20 @@
         border-radius: 10px;
         padding-left: 17px;
     }
-    .button1 button{
+.buttonn input:hover {
+    background-color: #071b64;
+    color: #fff;
+}
+    .button1 input{
         background-color: #37A9CD;
         color: aliceblue;
+        width: 400px;
+        height: 50px;
+        border:none ;
+        border-radius: 10px;
     }
     .button2 button{
+        display: none;
         background-color: #2D3748;
         color: aliceblue;
         margin-top: 15px;

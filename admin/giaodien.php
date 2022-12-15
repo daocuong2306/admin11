@@ -34,7 +34,7 @@
 
         </table>
     </form>
-    <button><a href="index.php?act=addlh">them moi lop hoc</a></button>
+    <button class="check"><a href="index.php?act=addlh" class="addlh">them moi lop hoc</a></button>
 </div>
 
 
