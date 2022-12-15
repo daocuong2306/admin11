@@ -26,7 +26,8 @@ switch ($check) {
            if(isset($_SESSION["user"])) {
                extract($_SESSION["user"]);
                if(isset($idgiaovien)) {
-//                   header('Location: admin/index.php');
+                   header('Location: admin/index.php');
+                   exit();
                } else {
                 session_unset();
                    echo "ban k phai giao vien";
@@ -38,6 +39,7 @@ switch ($check) {
     case "hocsinh":
         if(isset($_SESSION["user"])) {
             header('Location: admin/index.php');
+            exit();
         } else {
             include "view/login.php";
         }

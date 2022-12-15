@@ -36,9 +36,8 @@
                             <a href="../admin/index.php?act=lophoc" id="abc">Lớp Học</a>
                         </div>
                         <?php
-                        echo "<pre>";
-                        echo  print_r($_SESSION);
-                        $idgiaovien = $_SESSION['user'];
+
+                        extract($_SESSION['user']);
                         if(isset($idgiaovien)) {
 
                         ?>

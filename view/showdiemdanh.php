@@ -9,6 +9,19 @@ foreach ($dsgv as $value){
 } }
 
 ?>
+<div class="showMain">
+    <h2>JSA-13</h2>
+    <p>Đào Mạnh Cường</p>
+    <div class="menu-list">
+        <ul>
+            <li><a href="../admin/index.php?act=listsv">Học Viên</a></li>
+            <li><a href="../admin/index.php?act=diemdanh&idlophoc=<?php echo $_SESSION['lophoc']; ?>">Điểm Danh</a></li>
+            <li><a href="../admin/index.php?act=addlichhoc&idlophoc=<?php echo $_SESSION['lophoc']; ?>">Lichj hocj</a></li>
+            <li><a href="">Điểm</a></li>
+        </ul>
+        <button class="exit">Thoát</button>
+    </div>
+</div>
             <table border="1">
                 <tr>
                     <td>Tên Học sinh</td>
@@ -20,17 +33,23 @@ foreach ($dsgv as $value){
                 <form action="index.php?act=diemdanh&idlophoc=<?php echo $_SESSION['lophoc']; ?>" method="post" enctype="multipart/form-data">
 
                 <?php
-                if(isset($idgiaovien)) {
+
+
                 $mangdd = [];
+                $dsdd= array_column($dsdd, null , "idsinhvien");
                 foreach ($dssv as $value){
                     extract($value);
                     $anh="../uploadimg/".$img;
+                    if(isset($dsdd[$idsinhvien]))
+                    {
+                        $checked = "checked";
+                    } else  $checked = "";
                     echo '
                         <tr>
                             <td>'.$name.'</td>
                             <td>'.$tell.'</td>
                             <td> <img src="'.$anh.'" alt=""></td>
-                            <td><input type="checkbox" name="checkdd[]" value="'.$idsinhvien.'"></td>
+                            <td><input type="checkbox" '.$checked.' name="checkdd[]" value="'.$idsinhvien.'"></td>
                         </tr>
                     
                     ';
@@ -45,10 +64,7 @@ foreach ($dsgv as $value){
             insert_dd($value,$_GET['idlophoc']);
         }
         echo "thanh cong";
-    } }
-                else {
-                    //phần hiển thị của học sinh
-                }
+    }
 //    array_push($mangdd , $_POST['checkdd']);
 // echo $mangdd[0][1];
     ?>
