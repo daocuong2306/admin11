@@ -204,7 +204,7 @@ if(isset($_GET['act'])){
                                 $ca=$_POST['ca'];
                                 $sobuoihoc=$_POST['sobuoihoc'];
                                 $ngay = $_POST['ngay'];
-                                
+
                                 insert_lichhoc($idlophoc,$ca,$ngay,$sobuoihoc);
                                 $thongbao = "thêm thành công";
                             }
@@ -281,11 +281,13 @@ if(isset($_GET['act'])){
                 break;
             case "diemdanh" :
                 if(isset($idgiaovien)) {
-
-                $dsdd = loaddd($idlophoc);
+                
                 $idlophoc = $_GET['idlophoc'];
+                $loadonelophoc=loadone($idlophoc);
+                $dsdd = loaddd($idlophoc);
                 $dssv= loadsv_by_idlophoc($idlophoc);
                 $dsgv =  loadgv_by_idlophoc($idlophoc);
+                $onelh=load_lichhoc_by_idlophoc($idlophoc);
                     include "../view/showdiemdanh.php"; }
                 else {
                     include "../view/showdiemdanh.php";

@@ -10,8 +10,21 @@ foreach ($dsgv as $value){
 
 ?>
 <div class="showMain">
-    <h2>JSA-13</h2>
-    <p>Đào Mạnh Cường</p>
+    <?php extract($loadonelophoc);
+    echo '<h2>Lớp học:'.$tenlophoc.'</h2>';
+    extract($dsgv);
+    echo '<h2>Giảng Viên:'.$name.'</h2>';
+    
+   $onelh = array_column($onelh, null, 'idlichhoc');
+   extract($onelh);
+   
+    echo '<h2>Ngày:'.date_create()->format("d/m/y").'</h2>';
+    echo "<pre>";
+    echo print_r($onelh);
+    die();
+    ?> 
+    <!-- <h2>JSA-13</h2>
+    <p>Đào Mạnh Cường</p> -->
     <div class="menu-list">
         <ul>
             <li><a href="../admin/index.php?act=listsv">Học Viên</a></li>
@@ -31,7 +44,7 @@ foreach ($dsgv as $value){
                     <td>Trạng Thái</td>
                 </tr>
                 <form action="index.php?act=diemdanh&idlophoc=<?php echo $_SESSION['lophoc']; ?>" method="post" enctype="multipart/form-data">
-
+                
                 <?php
 
 
@@ -46,6 +59,7 @@ foreach ($dsgv as $value){
                     } else  $checked = "";
                     echo '
                         <tr>
+                            
                             <td>'.$name.'</td>
                             <td>'.$tell.'</td>
                             <td> <img src="'.$anh.'" alt=""></td>
@@ -61,7 +75,9 @@ foreach ($dsgv as $value){
     if (isset($_POST['checkdd']) && $_POST['checkdd']) {
         array_push($mangdd , $_POST['checkdd']);
         foreach ($mangdd[0] as $value) {
-            insert_dd($value,$_GET['idlophoc']);
+            extract($onelh);
+            echo $idlichhoc;
+            insert_dd($value,$_GET['idlophoc'],$idlichhoc);
         }
         echo "thanh cong";
     }
