@@ -30,7 +30,7 @@ switch ($check) {
                    header('Location: admin/index.php');
                    exit();
                } else {
-                session_unset();
+                // session_unset();
                    echo "ban k phai giao vien";
                }
            } else {
