@@ -1,6 +1,5 @@
 <?php
 session_start();
-ob_start();
 include "../view/header.php";
 include "../model/lichhoc.php";
 include "../model/pdo.php";
@@ -204,7 +203,6 @@ if(isset($_GET['act'])){
                         break;
 
                         case 'addlichhoc' :
-                            if(isset($idgiaovien)) {
                             // echo "<pre>";
                             // echo print_r($_POST);
                             // $listlh=loadall_lh();
@@ -231,10 +229,8 @@ if(isset($_GET['act'])){
                                 $thongbao = "thêm thành công";
                             }
                             
-                             include "lichhoc/add.php"; }
-                            else {
-                                //show list lịch học
-                            }
+                             include "lichhoc/add.php"; 
+
                             break;  
                         case 'listlichhoc' :
                             $idlophoc=$_GET['idlophoc'];
@@ -330,10 +326,10 @@ if(isset($_GET['act'])){
             break;
                 case "thoat" :
                     //            echo session_destroy();
-                                header("location: ../index.php");
                                 session_unset();
-                                exit;
+                                header("location: ../index.php");
                                 break;
+            break;
                 case 'listgv' :
                     $giaovien = loadall_gv();
                     include "giao_vien/list.php";

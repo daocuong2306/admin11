@@ -12,9 +12,10 @@
             if(isset($idsinhvien)){
             $lsv = sinhvien($idsinhvien);
             // print_r($_SESSION['user']);
+            $i=0;
             foreach ($lsv as $lh)  {
                 extract($lh);
-                $i=0;
+                
                 $i++;
                 
                 

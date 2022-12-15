@@ -41,7 +41,13 @@ border-radius: 5px;
     extract($value);
     $now=date_create($ngay)->format("Y/m/d");
 
-    $x=$date==$now ? ' <td><button><a href="index.php?act=diemdanh&idlophoc='.$idlophoc.'">điểm danh</a></button></td>':"";
+    extract($_SESSION['user']);
+    if(isset($idsinhvien) ){
+        $x="";
+    }else{
+        
+        $x=$date==$now ? ' <td><button><a href="index.php?act=diemdanh&idlophoc='.$idlophoc.'">điểm danh</a></button></td>':"";
+    }
     echo '
     <tr>
     <td>'.$ngay.'</td>
@@ -52,4 +58,15 @@ border-radius: 5px;
 }
 extract($lichhoc); ?>
 </table>
-<button><a href="index.php?act=addlichhoc&idlophoc=<?php echo $idlophoc?>" class="addlh">thêm lịch học</a></button>
+<?php
+if(isset($idgiaovien) || isset($ID)){
+echo "";
+   
+}
+else{
+    
+    ?>
+     <button><a href="index.php?act=addlichhoc&idlophoc=<?php echo $idlophoc?>" class="addlh">thêm lịch học</a></button>
+    <?php
+}
+?>
