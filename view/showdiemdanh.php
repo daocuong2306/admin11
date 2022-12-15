@@ -1,6 +1,5 @@
 <?php
 $_SESSION['lophoc'] = $_GET["idlophoc"];
-echo $_SESSION['lophoc'];
 if(isset($idgiaovien)) {
 foreach ($dsgv as $value){
     extract($value);

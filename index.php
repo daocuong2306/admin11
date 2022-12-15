@@ -9,6 +9,7 @@ switch ($check) {
     case "dangnhap" :
 
         if(isset($_POST['dangnhap']) && ($_POST['dangnhap']) ) {
+            
 
             $user = $_POST["user"];
             $pass = $_POST["pass"];
