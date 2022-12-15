@@ -20,7 +20,7 @@ if(isset($_GET['act'])){
                 $dress = $_POST['dress'];
                 $age = $_POST['age'];
                 $tell = $_POST['tell'];
-                $idlophoc = $_POST['idlophoc'];
+                // $idlophoc = $_POST['idlophoc'];
                 $userGV = $_POST['userSV'];
                 $pass = $_POST['pass'];
                 $img=$_FILES['img']['name'];
@@ -33,7 +33,7 @@ if(isset($_GET['act'])){
 //                      echo 'sorry, ảnh của bạn ko được uplead';
                 }
                 $gioitinh = $_POST['gioitinh'];
-                insert_sv($name,$dress,$age,$tell,$img,$gioitinh,$idlophoc,$userGV,$pass);
+                insert_sv($name,$dress,$age,$tell,$img,$gioitinh,$userGV,$pass);
                 $thongbao = "thêm thành công";
             }
             $listlophoc=loadall_lh();
@@ -68,7 +68,7 @@ if(isset($_GET['act'])){
                 break;
             case 'listsv' :
               $sinhvien = loadall_sv();
-                    include "../view/showLop.php";
+                    include "sinh_vien/list.php";
 
                     break;
             case 'suasv':
@@ -116,7 +116,7 @@ if(isset($_GET['act'])){
                 case 'suagv':
                     if(isset($_GET['id']) && ($_GET['id']>0)){
                         $suagv = loadone_gv($_GET['id']);
-                    
+                        $listlophoc=loadall_lh();
                         include "giao_vien/update.php";
                     }
                     // $listlophoc=loadall_lh();
@@ -128,6 +128,8 @@ if(isset($_GET['act'])){
                         $name = $_POST['name'];
                         $adress = $_POST['adress'];
                         $age = $_POST['age'];
+                        $userGV = $_POST['userGV'];
+                        $pass = $_POST['pass'];
                         $tell = $_POST['tell'];
                         $idlophoc = $_POST['idlophoc'];
                         $img=$_FILES['img']['name'];
@@ -139,7 +141,7 @@ if(isset($_GET['act'])){
     //                      echo 'sorry, ảnh của bạn ko được uplead';
                             }
                         $gioitinh = $_POST['gioitinh'];
-                        update_gv($idgiaovien,$name,$adess,$age,$gmail,$tell,$img,$gioitinh,$idlophoc);
+                        update_gv($idgiaovien,$name,$adess,$age,$gmail,$tell,$img,$gioitinh,$idlophoc,$userGV,$pass);
                         $thongbao = "thêm thành công";
                     }
                     $listlophoc=loadall_lh();
@@ -186,7 +188,9 @@ if(isset($_GET['act'])){
                         // echo print_r($_GET);
                                                 $idlophoc = $_GET['idlophoc'];
                                                 $dsgv = loadgv_by_idlophoc($idlophoc);
-                                                $dssv = loadsv_by_idlophoc($idlophoc);
+                                                // $dssv = loadsv_by_idlophoc($idlophoc);
+                                                $dssv=svl($idlophoc);
+                                                // print_r($dssv);
                                                 $lophoc=loadone($idlophoc);
                                                 include "lop_hoc/lophoc.php";
                                                 
@@ -238,6 +242,7 @@ if(isset($_GET['act'])){
                             $gv=loadgv_by_idlophoc($idlophoc);
                             include "lichhoc/list.php";
                             break;
+                            
                     case 'addtt':
                         if(isset($_POST['themmoi'])&& ($_POST['themmoi'])){
                             $tieude = $_POST['tieude'];
@@ -296,13 +301,17 @@ if(isset($_GET['act'])){
                 }
                 include "dangnhap.html";
                 break;
+                case "addsinhvienlop":
+                    $dssv=loadall_sv();
+                    include "lop_hoc/themsinhvien.php";
+                    break;
             case "diemdanh" :
                 if(isset($idgiaovien)) {
                 
                 $idlophoc = $_GET['idlophoc'];
                 $loadonelophoc=loadone($idlophoc);
                 $dsdd = loaddd($idlophoc);
-                $dssv= loadsv_by_idlophoc($idlophoc);
+                $dssv= svl($idlophoc);
                 $dsgv =  loadgv_by_idlophoc($idlophoc);
                 $onelh=load_lichhoc_by_idlophoc($idlophoc);
                     include "../view/showdiemdanh.php"; }

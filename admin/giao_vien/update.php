@@ -41,6 +41,14 @@ if(is_file($avatar )){
            <input type="text" name="tell" id="" value="<?php echo $tell ?>">
         </div>
         <div class="rowinput">
+            username <br>
+           <input type="text" name="userGV" id="" value="<?php echo $userGV ?>">
+        </div>
+        <div class="rowinput">
+            password <br>
+           <input type="text" name="pass" id="" value="<?php echo $pass ?>">
+        </div>
+        <div class="rowinput">
             Ảnh <br>
             <div>
            <?php echo $img ?>
@@ -52,9 +60,21 @@ if(is_file($avatar )){
            <input type="text" name="gioitinh" id="" value="<?php echo $gioitinh ?>">
         </div>
         <div class="rowinput">
+        <select name="idlophoc">
+                <?php
+                foreach ($listlophoc as $lophoc) {
+                    extract($lophoc);
+                    echo '<option value="'.$idlophoc.'"> '.$tenlophoc.' </option>';
+
+                } 
+                ?>
+                
+            </select>
+            </div>
+
   
         <div class="rowsubmit">
-            <input type="submit" name="themmoi" id="" value="thêm mới">
+            <input type="submit" name="capnhat" id="" value="thêm mới">
             <input type="reset" name="" id="" value="nhập lại">
             <a href="index.php?act=listgv"><input type="button" name="" id="" value="danh sách"></a>
         </div>

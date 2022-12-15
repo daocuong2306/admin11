@@ -81,7 +81,7 @@
             </div>
             <div class="rowbuttom">
                 
-                <a href="index.php?act=addsv"><input type="button" name="" id="" value="nhập thêm"></a>
+                <a href="index.php?act=addgv"><input type="button" name="" id="" value="nhập thêm"></a>
             </div>
         </div>
         

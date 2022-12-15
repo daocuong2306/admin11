@@ -1,6 +1,6 @@
 <?php
-function insert_sv($name,$dress,$age,$tell,$img,$gioitinh,$idlophoc,$userGV,$pass){
-    $spl = "insert into sinhvien values (null,'$name','$dress','$age','$tell','$img','$gioitinh','$idlophoc','$userGV','$pass')";
+function insert_sv($name,$dress,$age,$tell,$img,$gioitinh,$userGV,$pass){
+    $spl = "insert into sinhvien values (null,'$name','$dress','$age','$tell','$img','$gioitinh','$userGV','$pass')";
     pdo_execute($spl);
 }
 function loadall_sv(){
@@ -25,9 +25,9 @@ function update_sv($idsinhvien,$name,$dress,$age,$tell,$img,$gioitinh,$userGV,$p
     }
     pdo_execute($sql);
 }
-function loadsv_by_idlophoc($idlophoc){
-    $sql = "select * from sinhvien where idlophoc = ".$idlophoc;
-    $sv = pdo_query($sql);
-    return $sv;
-}
+// function loadsv_by_idlophoc($idlophoc){
+//     $sql = "select * from sinhvien where idlophoc = ".$idlophoc;
+//     $sv = pdo_query($sql);
+//     return $sv;
+// }
 ?>   

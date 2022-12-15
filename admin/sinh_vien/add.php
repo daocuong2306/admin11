@@ -37,7 +37,7 @@
             Giới tính <br>
            <input type="text" name="gioitinh" id="">
         </div>
-        <select name="idlophoc">
+        <!-- <select name="idlophoc">
                 <?php
                 foreach ($listlophoc as $lophoc) {
                     extract($lophoc);
@@ -46,7 +46,7 @@
                 } 
                 ?>
                 
-            </select>
+            </select> -->
         <div class="rowsubmit">
             <input type="submit" name="themmoi" id="" value="thêm mới">
             <input type="reset" name="" id="" value="nhập lại">

@@ -1,11 +1,5 @@
 <?php
-$_SESSION['lophoc'] = $_GET["idlophoc"];
-if(isset($idgiaovien)) {
-foreach ($dsgv as $value){
-    extract($value);
-    // echo $img_path.$anh_sanpham;
-    echo $name."<br>";
-} }
+
 
 ?>
 <div class="showMain">
@@ -44,27 +38,27 @@ foreach ($dsgv as $value){
                     <td>Ảnh</td>
                     <td>Trạng Thái</td>
                 </tr>
-                <form action="index.php?act=diemdanh&idlophoc=<?php echo $_SESSION['lophoc']; ?>" method="post" enctype="multipart/form-data">
+                <form action="index.php?act=addsinhvienlop&idlophoc=<?php echo $_SESSION['lophoc']; ?>" method="post" enctype="multipart/form-data">
                 
                 <?php
 
 
                 $mangdd = [];
-                $dsdd= array_column($dsdd, null , "idsinhvien");
+                // $dsdd= array_column($dsdd, null , "idsinhvien");
                 foreach ($dssv as $value){
                     extract($value);
                     $anh="../uploadimg/".$img;
-                    if(isset($dsdd[$idsinhvien]))
-                    {
-                        $checked = "checked";
-                    } else  $checked = "";
+                    // if(isset($dsdd[$idsinhvien]))
+                    // {
+                    //     $checked = "checked";
+                    // } else  $checked = "";
                     echo '
                         <tr>
                             
                             <td>'.$name.'</td>
                             <td>'.$tell.'</td>
                             <td> <img src="'.$anh.'" alt=""></td>
-                            <td><input type="checkbox" '.$checked.' name="checkdd[]" value="'.$idsinhvien.'"></td>
+                            <td><input type="checkbox"  name="checkdd[]" value="'.$idsinhvien.'"></td>
                         </tr>
                     
                     ';
@@ -72,20 +66,16 @@ foreach ($dsgv as $value){
                  } ?>
             </table>
                 <button class="seen"  name="gui" type="submit">Gửi</button>
-    <?php
-    if (isset($_POST['checkdd']) && $_POST['checkdd']) {
-        $_date = date_create("")->format("Y/m/d");
-        $check3 = getidby($_date,$_GET['idlophoc'])[0]['idlichhoc'];
-        array_push($mangdd , $_POST['checkdd']);
-        foreach ($mangdd[0] as $value) {
-            insert_dd($value,$check3,$_GET['idlophoc']);
-        }
-        echo "thanh cong";
-    } else {
-        delete_dd($idsinhvien,$idlophoc);
-    }
-    ?>
                 </form>
+                <?php 
+                if (isset($_POST['checkdd']) && $_POST['checkdd']) {
+                    array_push($mangdd , $_POST['checkdd']);
+                foreach ($mangdd[0] as $value) {
+                // extract($idsinhvien);
+                    inserths($_SESSION['lophoc'],$value);
+                }}
+
+                ?>
 
 
 

@@ -37,9 +37,10 @@ border-radius: 5px;
 </tr>
 
  <?php foreach($lichhoc as $value){ 
-    $date = date_create()->format("d/m/y");
+    $date = date_create()->format("Y/m/d");
     extract($value);
-    $now=date_create($ngay)->format("d/m/y");
+    $now=date_create($ngay)->format("Y/m/d");
+
     $x=$date==$now ? ' <td><button><a href="index.php?act=diemdanh&idlophoc='.$idlophoc.'">điểm danh</a></button></td>':"";
     echo '
     <tr>
@@ -51,4 +52,4 @@ border-radius: 5px;
 }
 extract($lichhoc); ?>
 </table>
-<button><a href="index.php?act=addlichhoc&idlophoc=<?php echo $idlophoc?>&idlichhoc=<?php echo $idlichhoc?>" class="addlh">thêm lịch học</a></button>
+<button><a href="index.php?act=addlichhoc&idlophoc=<?php echo $idlophoc?>" class="addlh">thêm lịch học</a></button>

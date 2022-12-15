@@ -1,6 +1,6 @@
 <div class="bentrong">
 
-    <form action="#" id="classStu">
+    
         <table>
             <tr class="STT">
                 <td>STT</td>
@@ -8,13 +8,18 @@
                 <td></td>
             </tr>
             <?php
-            // if(isset($idgiaovien)) {
-            $i=0;
-            foreach ($listlh as $lh)  {
+            extract($_SESSION['user']);
+            if(isset($idsinhvien)){
+            $lsv = sinhvien($idsinhvien);
+            print_r($_SESSION['user']);
+            foreach ($lsv as $lh)  {
                 extract($lh);
-                
+                $i=0;
                 $i++;
-                $load="index.php?act=loadoneclass&idlophoc=".$idlophoc;
+                
+                
+                    $load="index.php?act=listlichhoc&idlophoc=".$idlophoc;
+                
                 // $giangvien=loadgv_by_idlophoc($idlophoc);
                 // extract($giangvien);
 
@@ -24,17 +29,35 @@
                 echo '  <tr>        
                                                 <td>'.$i.'</td>
                                                 <td>'.$tenlophoc.'</td>
-                                                <td><button class="show"><a href="'.$load.'">Xem</a></button></td>
+                                                "<td><button class="show"><a href="'.$load.'">Xem</a></button></td>"
                                              </tr>';
             } 
-            // else {
-            //     //show ra nhưng lớp có học sinh theo học
-            // }
-            ?>
+            
+        }else if(isset($idgiaovien)){
+          foreach($listlh as $value){
+            $i=0;
+                $i++;
+            extract($value);
+            $load1="index.php?act=loadoneclass&idlophoc=".$idlophoc;
+            
+            echo '  <tr>        
+            <td>'.$i.'</td>
+            <td>'.$tenlophoc.'</td> 
+            "<td><button class="show"><a href="'.$load1.'">Xem</a></button></td>"
+         </tr>';
+          }?>
 
+        <button class="check"><a href="index.php?act=addlh" class="addlh">thêm mới lớp học</a></button>
+        
+<?php
+        }
+
+            ?>
+           
         </table>
-    </form>
-    <button class="check"><a href="index.php?act=addlh" class="addlh">them moi lop hoc</a></button>
+    
+    
+    
 </div>
 
 
