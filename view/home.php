@@ -26,7 +26,7 @@
             <ul id="main-menu">
                 <li><a href="index.php?act=giaovien">GIÁO VIÊN </a></li>
                 <li><a href="index.php?act=hocsinh">HỌC SINH </a></li>
-                <li><a href="">QUẢN TRỊ </a></li>
+                <li><a href="index.php?act=admin">QUẢN TRỊ </a></li>
                 
             </ul>               
             <!-- <form action="" id="search-box">

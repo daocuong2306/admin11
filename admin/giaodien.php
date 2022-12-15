@@ -33,7 +33,7 @@
                                              </tr>';
             } 
             
-        }else if(isset($idgiaovien)){
+        }else{
           foreach($listlh as $value){
             $i=0;
                 $i++;

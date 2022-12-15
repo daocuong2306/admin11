@@ -1,5 +1,6 @@
 <?php
 session_start();
+ob_start();
 include "../view/header.php";
 include "../model/lichhoc.php";
 include "../model/pdo.php";
@@ -329,10 +330,10 @@ if(isset($_GET['act'])){
             break;
                 case "thoat" :
                     //            echo session_destroy();
-                                session_unset();
                                 header("location: ../index.php");
+                                session_unset();
+                                exit;
                                 break;
-            break;
                 case 'listgv' :
                     $giaovien = loadall_gv();
                     include "giao_vien/list.php";

@@ -15,8 +15,12 @@ switch ($check) {
             $pass = $_POST["pass"];
             $checkuserGV = checkuserGV($user, $pass);
             $checkuserSV = checkuserSV($user, $pass);
+            $checkuser = checkuser($user, $pass);
             if(is_array($checkuserGV)) {
                 dangnhap($checkuserGV,"giaovien");
+            }
+            elseif (is_array($checkuser)) {
+                dangnhap($checkuser,"admin");
             }
             else {
                 dangnhap($checkuserSV,"hocsinh");
@@ -37,10 +41,31 @@ switch ($check) {
                include "view/login.php";
            }
         break;
+    case "admin" :
+        if(isset($_SESSION["user"])) {
+            extract($_SESSION["user"]);
+            if(isset($ID)) {
+                header('Location: admin/index.php');
+                exit();
+            }
+            else {
+                session_unset();
+                echo "ban k phai admin";
+            }
+        }else {
+            include "view/login.php";
+        }
+        break;
     case "hocsinh":
         if(isset($_SESSION["user"])) {
-            header('Location: admin/index.php');
-            exit();
+            extract($_SESSION["user"]);
+            if(isset($idsinhvien)) {
+                header('Location: admin/index.php');
+                exit();
+            } else {
+                session_unset();
+                echo "ban k phai hoc sinh";
+            }
         } else {
             include "view/login.php";
         }
