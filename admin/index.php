@@ -279,6 +279,8 @@ if(isset($_GET['act'])){
                 break;
             case "diemdanh" :
                 if(isset($idgiaovien)) {
+
+                $dsdd = loaddd($idlophoc);
                 $idlophoc = $_GET['idlophoc'];
                 $dssv= loadsv_by_idlophoc($idlophoc);
                 $dsgv =  loadgv_by_idlophoc($idlophoc);
@@ -299,6 +301,7 @@ if(isset($_GET['act'])){
                     //            echo session_destroy();
                                 session_unset();
                                 header("location: ../index.php");
+                                exit();
                                 break;
             break;
                 case 'listgv' :

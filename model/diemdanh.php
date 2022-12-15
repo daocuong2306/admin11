@@ -6,10 +6,12 @@ function insert_dd($idsinhvien,$idlophoc){
 }
 
 
-function loaddd(){
-    $result = "select * from diemdanh order by idsinhvien ";
+
+function loaddd($idlophoc){
+    $result = "select * from diemdanh where  idlophoc = ".$idlophoc;
     $sinhvien=pdo_query($result);
     return $sinhvien;
 }
+
 
 ?>
