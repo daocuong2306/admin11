@@ -18,11 +18,8 @@ boder-radius:5px;
 border-radius: 5px;
 ">
     <?php 
-    
-
     ?>
     <h3> Lịch Học lớp <?php echo $lophoc['tenlophoc'] ?></h3>
-    
     Tên giáo viên:<?php 
             
             foreach ($gv as $value){
@@ -30,27 +27,24 @@ border-radius: 5px;
                 echo $name."<br>";
             }
             ?>
-    
 </div>
 <table border="1">
-    <tr>
+   
+<tr>
 <td>Ngày Học</td>
 <td>Ca Học</td>
-<td>Số Buổi Học</td>
 <td></td>
 </tr>
+
  <?php foreach($lichhoc as $value){ 
     $date = date_create()->format("d/m/y");
     extract($value);
     $now=date_create($ngay)->format("d/m/y");
     $x=$date==$now ? ' <td><button><a href="index.php?act=diemdanh&idlophoc='.$idlophoc.'">điểm danh</a></button></td>':"";
-    // if(date_parsr($ngay) >= date_parse(date())){
     echo '
     <tr>
     <td>'.$ngay.'</td>
     <td>'.$ca.'</td>
-    <td>Số Buổi Học</td>
-    
     '.$x.'
     </tr>';
 

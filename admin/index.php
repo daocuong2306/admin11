@@ -21,7 +21,10 @@ if(isset($_GET['act'])){
                 $age = $_POST['age'];
                 $tell = $_POST['tell'];
                 $idlophoc = $_POST['idlophoc'];
+                $userGV = $_POST['userSV'];
+                $pass = $_POST['pass'];
                 $img=$_FILES['img']['name'];
+                
                 $target_dir = "../uploadimg/";
                 $target_file = $target_dir.$img;
                 if(move_uploaded_file($_FILES['img']['tmp_name'], $target_file)){
@@ -30,7 +33,7 @@ if(isset($_GET['act'])){
 //                      echo 'sorry, ảnh của bạn ko được uplead';
                 }
                 $gioitinh = $_POST['gioitinh'];
-                insert_sv($name,$dress,$age,$tell,$img,$gioitinh,$idlophoc);
+                insert_sv($name,$dress,$age,$tell,$img,$gioitinh,$idlophoc,$userGV,$pass);
                 $thongbao = "thêm thành công";
             }
             $listlophoc=loadall_lh();
@@ -38,30 +41,33 @@ if(isset($_GET['act'])){
 
             break;
             case 'updatesv':
-                if(isset($_POST['capnhat']) && ($_POST['capnhat']!='') ){
-                    $idsinhvien = $_POST['id'];
+                if(isset($_POST['themmoi'])&& ($_POST['themmoi'])){
+                    $idsinhvien=$_POST['idsinhvien'];
                     $name = $_POST['name'];
                     $dress = $_POST['dress'];
                     $age = $_POST['age'];
                     $tell = $_POST['tell'];
-                
+                    $idlophoc = $_POST['idlophoc'];
+                    $userGV = $_POST['userSV'];
+                    $pass = $_POST['pass'];
                     $img=$_FILES['img']['name'];
+                    
                     $target_dir = "../uploadimg/";
                     $target_file = $target_dir.$img;
-                        if(move_uploaded_file($_FILES['img']['tmp_name'], $target_file)){
-//                      echo "ảnh của bạn đã được thêm thành công ";
-                        }else{
-//                      echo 'sorry, ảnh của bạn ko được uplead';
-                        }
+                    if(move_uploaded_file($_FILES['img']['tmp_name'], $target_file)){
+    //                      echo "ảnh của bạn đã được thêm thành công ";
+                    }else{
+    //                      echo 'sorry, ảnh của bạn ko được uplead';
+                    }
                     $gioitinh = $_POST['gioitinh'];
-                    update_sv($idsinhvien,$name,$dress,$age,$tell,$img,$gioitinh);
+                    update_sv($idsinhvien,$name,$dress,$age,$tell,$img,$gioitinh,$idlophoc,$userGV,$pass);
                     $thongbao = "thêm thành công";
                 }
               $sinhvien=loadall_sv();
                include "sinh_vien/list.php";
                 break;
             case 'listsv' :
-     ~          $sinhvien = loadall_sv();
+              $sinhvien = loadall_sv();
                     include "../view/showLop.php";
 
                     break;
@@ -84,10 +90,11 @@ if(isset($_GET['act'])){
             case 'addgv' :
                 if(isset($_POST['themmoi'])&& ($_POST['themmoi'])){
                 $name = $_POST['name'];
-                $dress = $_POST['dress'];
+                $adess = $_POST['dress'];
                 $age = $_POST['age'];
                 $tell = $_POST['tell'];
                 $idlophoc = $_POST['idlophoc'];
+                $gmail = $_POST['gmail'];
                 $userGV = $_POST['userGV'];
                 $pass = $_POST['pass'];
                 $img=$_FILES['img']['name'];
@@ -99,10 +106,10 @@ if(isset($_GET['act'])){
 //                      echo 'sorry, ảnh của bạn ko được uplead';
                 }
                 $gioitinh = $_POST['gioitinh'];
-                insert_gv($name,$adess,$age,$gmail,$tell,$img,$gioitinh,$tenlophoc,$userGV,$pass);
+                insert_gv($name,$adess,$age,$gmail,$tell,$img,$gioitinh,$idlophoc,$userGV,$pass);
                 $thongbao = "thêm thành công";
             }
-            $listlophoc=loadall_lh();
+               $listlophoc=loadall_lh();
                 include "giao_vien/add.php";
                 
                 break;
@@ -135,8 +142,8 @@ if(isset($_GET['act'])){
                         update_gv($idgiaovien,$name,$adess,$age,$gmail,$tell,$img,$gioitinh,$idlophoc);
                         $thongbao = "thêm thành công";
                     }
-                    // $listlophoc=loadall_lh();
-                  $sinhvien=loadall_sv();
+                    $listlophoc=loadall_lh();
+                    $giaovien = loadall_gv();
                    include "giao_vien/list.php";
                     break;
                     case 'listgv' :
@@ -146,14 +153,13 @@ if(isset($_GET['act'])){
                         $loadonelh=loadone($idlophoc);
                         $listlophoc=loadall_lh();
                         include "giao_vien/list.php";
-                        
-                        
                         break;
                     case 'xoagv':
                         if(isset($_GET['id']) && ($_GET['id']>0)) {
                             delete_gv($_GET['id']);
                         }
-                        $giaovien=loadall_gv();
+                          $listlophoc=loadall_lh();
+                           $giaovien=loadall_gv();
                             include "giao_vien/list.php";
                             break;
                 // dang nhap
@@ -163,6 +169,7 @@ if(isset($_GET['act'])){
                         $tenlophoc=$_POST['tenlophoc'];
                         insert_lh($tenlophoc);
                         $thongbao = "thêm thành công";
+
                     }
                    include 'lop_hoc/add.php';
 
@@ -205,7 +212,17 @@ if(isset($_GET['act'])){
                                 $sobuoihoc=$_POST['sobuoihoc'];
                                 $ngay = $_POST['ngay'];
 
-                                insert_lichhoc($idlophoc,$ca,$ngay,$sobuoihoc);
+                                $test = date_create($ngay);
+
+                                for($i=0;$i<$sobuoihoc;$i++) {
+                                    $a=7;
+                                    if($i==0){
+                                        $check1 = date_add($test, date_interval_create_from_date_string($i." days"));
+                                    }else{
+                                        $check1 = date_add($test, date_interval_create_from_date_string(($a)." days"));
+                                    }
+                                    insert_lichhoc($idlophoc,$ca,$check1->format("Y/m/d"));
+                                }
                                 $thongbao = "thêm thành công";
                             }
                             

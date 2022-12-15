@@ -26,6 +26,14 @@
             <input type="file" name="img" id="">
         </div>
         <div class="rowinput">
+            username <br>
+            <input type="text" name="userSV" id="">
+        </div>
+        <div class="rowinput">
+            pass <br>
+            <input type="text" name="pass" id="">
+        </div>
+        <div class="rowinput">
             Giới tính <br>
            <input type="text" name="gioitinh" id="">
         </div>

@@ -10,18 +10,19 @@ foreach ($dsgv as $value){
 
 ?>
 <div class="showMain">
-    <?php extract($loadonelophoc);
-    echo '<h2>Lớp học:'.$tenlophoc.'</h2>';
-    extract($dsgv);
-    echo '<h2>Giảng Viên:'.$name.'</h2>';
+    <?php
+//      extract($loadonelophoc);
+//     echo '<h2>Lớp học:'.$tenlophoc.'</h2>';
+//     extract($dsgv);
+//     echo '<h2>Giảng Viên:'.$name.'</h2>';
     
-   $onelh = array_column($onelh, null, 'idlichhoc');
-   extract($onelh);
+//    $onelh = array_column($onelh, null, 'idlichhoc');
+//    extract($onelh);
    
-    echo '<h2>Ngày:'.date_create()->format("d/m/y").'</h2>';
-    echo "<pre>";
-    echo print_r($onelh);
-    die();
+//     echo '<h2>Ngày:'.date_create()->format("d/m/y").'</h2>';
+//     echo "<pre>";
+//     echo print_r($onelh);
+    // die();
     ?> 
     <!-- <h2>JSA-13</h2>
     <p>Đào Mạnh Cường</p> -->

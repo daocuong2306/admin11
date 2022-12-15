@@ -70,13 +70,13 @@
                     ';
                          }
                     ?> 
-                    <td>
+                    <!-- <td>
                         <?php foreach ($listlophoc as $value) {
                     extract($value);
                     echo '<option value="'.$idlophoc.'"> '.$tenlophoc.' </option>';
                         }
                         ?>
-                </td>
+                </td> -->
                 </table>
             </div>
             <div class="rowbuttom">

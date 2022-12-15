@@ -32,7 +32,7 @@
                             <a href="../admin/trangchu.php" id="abc">Trang chủ</a>
                         </div>
                         <div class="img_text">
-                            <a href="../admin/index.php?act=lophoc"<i class="fa-solid fa-table"></i> </a>
+                            <a href="../admin/index.php?act=lophoc" ><i class="fa-solid fa-table"></i> </a>
                             <a href="../admin/index.php?act=lophoc" id="abc">Lớp Học</a>
                         </div>
                         <?php
@@ -42,14 +42,14 @@
 
                         ?>
                         <div class="img_text">
-                            <a href="index.php?act=showallsv"> <i class="fa-solid fa-user"></i></a>
-                            <a href="index.php?act=showallsv" id="abc">Học Sinh</a>
+                            <a href="index.php?act=listsv"> <i class="fa-solid fa-user"></i></a>
+                            <a href="index.php?act=listsv" id="abc">Học Sinh</a>
                         </div>
                         <div class="img_text">
-                            <a href="index.php?act=showallgv"><i class="fa-solid fa-book-open-reader"></i></a>
-                            <a href="index.php?act=showallgv" id="abc">Giao Viên</a>
+                            <a href="index.php?act=listgv"><i class="fa-solid fa-book-open-reader"></i></a>
+                            <a href="index.php?act=listgv" id="abc">Giao Viên</a>
                         </div>
-                        <div class="img_text">
+                        <!-- <div class="img_text">
                             <a href="./indexkhoahoc.html"><i class="fa-solid fa-book"></i></a>
                             <a href="./indexkhoahoc.html" id="abc">Khóa Học</a>
                         </div>
@@ -59,7 +59,7 @@
                             <a href="./indexlichhoc.html"><i class="fa-solid fa-id-card"></i></a>
                             <a href="./indexlichhoc.html" id="abc">lich hoc</a>
 
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
