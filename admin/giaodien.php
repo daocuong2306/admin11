@@ -11,7 +11,7 @@
             extract($_SESSION['user']);
             if(isset($idsinhvien)){
             $lsv = sinhvien($idsinhvien);
-            print_r($_SESSION['user']);
+            // print_r($_SESSION['user']);
             foreach ($lsv as $lh)  {
                 extract($lh);
                 $i=0;
