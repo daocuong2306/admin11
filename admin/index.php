@@ -202,8 +202,10 @@ if(isset($_GET['act'])){
                                 // $idlophoc = $_POST['idlophoc'];
                                 $idlophoc=$_GET['idlophoc'];
                                 $ca=$_POST['ca'];
+                                $sobuoihoc=$_POST['sobuoihoc'];
                                 $ngay = $_POST['ngay'];
-                                insert_lichhoc($idlophoc,$ca,$ngay);
+                                
+                                insert_lichhoc($idlophoc,$ca,$ngay,$sobuoihoc);
                                 $thongbao = "thêm thành công";
                             }
                             

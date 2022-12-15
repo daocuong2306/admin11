@@ -40,15 +40,21 @@ border-radius: 5px;
 <td></td>
 </tr>
  <?php foreach($lichhoc as $value){ 
+    $date = date_create()->format("d/m/y");
     extract($value);
+    $now=date_create($ngay)->format("d/m/y");
+    $x=$date==$now ? ' <td><button><a href="index.php?act=diemdanh&idlophoc='.$idlophoc.'">điểm danh</a></button></td>':"";
     // if(date_parsr($ngay) >= date_parse(date())){
     echo '
     <tr>
     <td>'.$ngay.'</td>
     <td>'.$ca.'</td>
     <td>Số Buổi Học</td>
-    <td></td>
+    
+    '.$x.'
     </tr>';
 
-} ?>
+}
+extract($lichhoc); ?>
 </table>
+<button><a href="index.php?act=addlichhoc&idlophoc=<?php echo $idlophoc?>">thêm lịch học</a></button>

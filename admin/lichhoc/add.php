@@ -39,7 +39,7 @@ extract($lophoc)
     </select><br> -->
     Ngày học : <input type="date" name="ngay" id="">
     ca : <input type="text" name="ca" id="">
-        
+    số buổi học <input type="number" min="0" name="sobuoihoc" id="">
         <div class="rowsubmit">
             <input type="submit" name="themmoi" id="" value="thêm mới">
             <input type="reset" name="" id="" value="nhập lại">
