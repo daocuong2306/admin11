@@ -13,5 +13,8 @@ function loaddd($idlophoc){
     return $sinhvien;
 }
 
-
+function delete_dd($idsinhvien,$idlophoc){
+    $sql = "delete from diemdanh where idsinhvien =".$idsinhvien." and idlophoc =".$idlophoc;
+    pdo_execute($sql);
+}
 ?>
