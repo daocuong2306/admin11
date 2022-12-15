@@ -13,5 +13,9 @@ function loadall_lichhoc(){
     $onelop = pdo_query($sql);
     return $onelop;
 }
-
+function getidby($ngay,$idlophoc) {
+    $sql = "select * from lichhoc where idlophoc = ".$idlophoc." and ngay='".$ngay."' limit 1";
+    $onelop = pdo_query($sql);
+    return $onelop;
+}
 ?>

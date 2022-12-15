@@ -73,13 +73,17 @@ foreach ($dsgv as $value){
                 <button class="seen"  name="gui" type="submit">Gửi</button>
     <?php
     if (isset($_POST['checkdd']) && $_POST['checkdd']) {
+        $_date = date_create("")->format("Y/m/d");
+        $check3 = getidby($_date,$_GET['idlophoc'])[0]['idlichhoc'];
+        echo $check3 ;
         array_push($mangdd , $_POST['checkdd']);
         foreach ($mangdd[0] as $value) {
-            extract($onelh);
-            echo $idlichhoc;
-            insert_dd($value,$_GET['idlophoc'],$idlichhoc);
+
+            insert_dd($value,$check3,$_GET['idlophoc']);
         }
         echo "thanh cong";
+    } else {
+        delete_dd($idsinhvien,$idlophoc);
     }
 //    array_push($mangdd , $_POST['checkdd']);
 // echo $mangdd[0][1];
