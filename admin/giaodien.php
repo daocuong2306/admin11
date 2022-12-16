@@ -30,7 +30,7 @@
                 echo '  <tr>        
                                                 <td>'.$i.'</td>
                                                 <td>'.$tenlophoc.'</td>
-                                                "<td><button class="show"><a href="'.$load.'">Xem</a></button></td>"
+                                                <td><button class="show"><a href="'.$load.'">Xem</a></button></td>
                                              </tr>';
             } 
             
@@ -44,12 +44,19 @@
             echo '  <tr>        
             <td>'.$i.'</td>
             <td>'.$tenlophoc.'</td> 
-            "<td><button class="show"><a href="'.$load1.'">Xem</a></button></td>"
+            <td><button class="show"><a href="'.$load1.'">Xem</a></button></td>
          </tr>';
           }?>
 
-        <button class="check"><a href="index.php?act=addlh" class="addlh">thêm mới lớp học</a></button>
         
+        
+        <?php 
+                    extract($_SESSION['user']);
+                    if(isset($ID)){ ?>
+                    <button class="check"><a href="index.php?act=addlh" class="addlh">thêm mới lớp học</a></button>
+                    <?php }else{
+                        echo "";
+                    }?>
 <?php
         }
 

@@ -3,7 +3,7 @@
             echo $_SESSION['lophoc'];
  ?>        <div class="all">
             <div class="showMain">
-                <h2>JSA-13</h2>
+                <!-- <h2>JSA-13</h2> -->
             <?php 
             
             foreach ($dsgv as $value){
